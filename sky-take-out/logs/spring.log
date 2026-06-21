@@ -1,0 +1,74 @@
+2026-06-21 22:44:13.573 [main] INFO  com.sky.SkyServerApplication - Starting SkyServerApplication using Java 17.0.12 on Assaka with PID 58540 (C:\Assaka_sky\sky-take-out\sky-server\target\classes started by 26827 in C:\Assaka_sky\sky-take-out)
+2026-06-21 22:44:13.574 [main] INFO  com.sky.SkyServerApplication - The following 1 profile is active: "dev"
+2026-06-21 22:44:14.004 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-21 22:44:14.006 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-21 22:44:14.025 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2026-06-21 22:44:14.431 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-06-21 22:44:14.437 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-21 22:44:14.437 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2026-06-21 22:44:14.515 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-21 22:44:14.515 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 916 ms
+2026-06-21 22:44:14.585 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-06-21 22:44:14.669 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-06-21 22:44:14.834 [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-06-21 22:44:15.314 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-06-21 22:44:15.405 [main] INFO  com.sky.SkyServerApplication - Started SkyServerApplication in 2.094 seconds (JVM running for 2.315)
+2026-06-21 22:47:06.048 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-21 22:47:06.048 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-21 22:47:06.049 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-06-21 22:47:06.059 [http-nio-8080-exec-1] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzgyMDU5OTM4fQ.F07vuoJLFGKAeJ-kZriT2UrFpGYQ-ZOOybBcZNdAaec
+2026-06-21 22:47:06.086 [http-nio-8080-exec-1] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：
+2026-06-21 22:47:16.599 [http-nio-8080-exec-2] INFO  com.sky.controller.admin.EmployeeController - 员工登录：EmployeeLoginDTO(username=admin, password=123456)
+2026-06-21 22:47:16.701 [http-nio-8080-exec-2] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==>  Preparing: select * from employee where username = ?
+2026-06-21 22:47:16.724 [http-nio-8080-exec-2] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==> Parameters: admin(String)
+2026-06-21 22:47:16.750 [http-nio-8080-exec-2] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - <==      Total: 1
+2026-06-21 22:47:16.777 [http-nio-8080-exec-3] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/order/conditionSearch
+2026-06-21 22:47:16.791 [http-nio-8080-exec-4] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/shop/status
+2026-06-21 22:47:16.793 [http-nio-8080-exec-5] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/businessData
+2026-06-21 22:47:16.794 [http-nio-8080-exec-6] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewOrders
+2026-06-21 22:47:16.795 [http-nio-8080-exec-7] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewDishes
+2026-06-21 22:47:16.797 [http-nio-8080-exec-8] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewSetmeals
+2026-06-21 22:47:17.088 [http-nio-8080-exec-9] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /ws/bmsdy3ly7y7
+2026-06-21 22:55:39.075 [http-nio-8080-exec-10] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzgyMDYwNDM2fQ.IIhst89Q4YgQ2BdNrtWQFglvjsSO1GtZqI3rUjNaZD8
+2026-06-21 22:55:39.076 [http-nio-8080-exec-10] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：
+2026-06-21 22:55:40.640 [http-nio-8080-exec-1] INFO  com.sky.controller.admin.EmployeeController - 员工登录：EmployeeLoginDTO(username=admin, password=123456)
+2026-06-21 22:55:40.652 [http-nio-8080-exec-1] ERROR com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 503911
+2026-06-21 22:55:40.655 [http-nio-8080-exec-1] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==>  Preparing: select * from employee where username = ?
+2026-06-21 22:55:40.655 [http-nio-8080-exec-1] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==> Parameters: admin(String)
+2026-06-21 22:55:40.656 [http-nio-8080-exec-1] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - <==      Total: 1
+2026-06-21 22:55:40.672 [http-nio-8080-exec-3] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/shop/status
+2026-06-21 22:55:40.673 [http-nio-8080-exec-2] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/order/conditionSearch
+2026-06-21 22:55:40.689 [http-nio-8080-exec-4] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/businessData
+2026-06-21 22:55:40.690 [http-nio-8080-exec-5] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewOrders
+2026-06-21 22:55:40.692 [http-nio-8080-exec-6] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewDishes
+2026-06-21 22:55:40.692 [http-nio-8080-exec-7] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewSetmeals
+2026-06-21 22:55:40.987 [http-nio-8080-exec-8] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /ws/pl4e6ymooj
+2026-06-21 23:04:28.015 [http-nio-8080-exec-9] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzgyMDYwOTQwfQ.1pHhvTovj-XVdFMl7rv3IRPpVIEfQEYpR8M44V0MAOI
+2026-06-21 23:04:28.016 [http-nio-8080-exec-9] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：
+2026-06-21 23:05:03.040 [http-nio-8080-exec-10] INFO  com.sky.controller.admin.EmployeeController - 员工登录：EmployeeLoginDTO(username=admi, password=123456)
+2026-06-21 23:05:03.042 [http-nio-8080-exec-10] ERROR com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 562387
+2026-06-21 23:05:03.047 [http-nio-8080-exec-10] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==>  Preparing: select * from employee where username = ?
+2026-06-21 23:05:03.047 [http-nio-8080-exec-10] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==> Parameters: admi(String)
+2026-06-21 23:05:03.056 [http-nio-8080-exec-10] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - <==      Total: 0
+2026-06-21 23:05:03.059 [http-nio-8080-exec-10] ERROR com.sky.handler.GlobalExceptionHandler - 异常信息：账号不存在
+2026-06-21 23:05:59.050 [http-nio-8080-exec-1] INFO  com.sky.controller.admin.EmployeeController - 员工登录：EmployeeLoginDTO(username=admi, password=123456)
+2026-06-21 23:05:59.052 [http-nio-8080-exec-1] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==>  Preparing: select * from employee where username = ?
+2026-06-21 23:05:59.052 [http-nio-8080-exec-1] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==> Parameters: admi(String)
+2026-06-21 23:05:59.054 [http-nio-8080-exec-1] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - <==      Total: 0
+2026-06-21 23:05:59.055 [http-nio-8080-exec-1] ERROR com.sky.handler.GlobalExceptionHandler - 异常信息：账号不存在
+2026-06-21 23:09:24.486 [http-nio-8080-exec-3] INFO  com.sky.controller.admin.EmployeeController - 员工登录：EmployeeLoginDTO(username=admin, password=123456)
+2026-06-21 23:09:24.487 [http-nio-8080-exec-3] ERROR com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 205433
+2026-06-21 23:09:24.491 [http-nio-8080-exec-3] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==>  Preparing: select * from employee where username = ?
+2026-06-21 23:09:24.491 [http-nio-8080-exec-3] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==> Parameters: admin(String)
+2026-06-21 23:09:24.492 [http-nio-8080-exec-3] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - <==      Total: 1
+2026-06-21 23:09:24.512 [http-nio-8080-exec-2] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/order/conditionSearch
+2026-06-21 23:09:24.516 [http-nio-8080-exec-4] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/shop/status
+2026-06-21 23:09:24.524 [http-nio-8080-exec-5] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/businessData
+2026-06-21 23:09:24.527 [http-nio-8080-exec-7] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewOrders
+2026-06-21 23:09:24.530 [http-nio-8080-exec-6] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewDishes
+2026-06-21 23:09:24.533 [http-nio-8080-exec-8] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewSetmeals
+2026-06-21 23:09:24.811 [http-nio-8080-exec-9] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /ws/2q9jei9rfy8
+2026-06-21 23:09:26.879 [http-nio-8080-exec-10] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzgyMDYxNzY0fQ.yy0sIXSZ3d0hBEsHAwbZ2QVyRWiUa5MCGhCo49nb_eI
+2026-06-21 23:09:26.881 [http-nio-8080-exec-10] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：
+2026-06-21 23:19:46.926 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2026-06-21 23:19:46.927 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
