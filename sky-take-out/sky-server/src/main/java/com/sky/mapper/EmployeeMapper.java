@@ -12,6 +12,7 @@ public interface EmployeeMapper {
 
     /**
      * 根据用户名查询员工
+     *
      * @param username
      * @return
      */
@@ -27,7 +28,15 @@ public interface EmployeeMapper {
 
     /**
      * 分页查询员工
+     *
      * @param
      */
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * 更新员工状态
+     *
+     * @param employee
+     */
+    void update(Employee employee);
 }
