@@ -57,4 +57,17 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
             return false;
         }
     }
+
+    /**
+     * 强制清理该线程上下文，防止内存泄露
+     *
+     * @param request
+     * @param response
+     * @param handler
+     * @param ex
+     */
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+        BaseContext.removeCurrentId();
+    }
 }

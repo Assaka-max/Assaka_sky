@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -53,7 +54,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             throw new PasswordErrorException(MessageConstant.PASSWORD_ERROR);
         }
 
-        if (employee.getStatus() == StatusConstant.DISABLE) {
+        if (Objects.equals(employee.getStatus(), StatusConstant.DISABLE)) {
             //账号被锁定
             throw new AccountLockedException(MessageConstant.ACCOUNT_LOCKED);
         }
