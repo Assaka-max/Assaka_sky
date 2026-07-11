@@ -22,7 +22,14 @@ public interface CategoryService {
 
     /**
      * 根据id删除分类
-     * @param category
+     * @param categoryDTO
      */
-    void deleteById(Category category);
+    void deleteById(CategoryDTO categoryDTO);
+
+    /**
+     * 修改分类
+     * @param categoryDTO
+     */
+    void update(CategoryDTO categoryDTO);
+
 }

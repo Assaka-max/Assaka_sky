@@ -1,6 +1,7 @@
 package com.sky.mapper;
 
 import com.github.pagehelper.Page;
+import com.sky.dto.CategoryDTO;
 import com.sky.dto.CategoryPageQueryDTO;
 import com.sky.entity.Category;
 import org.apache.ibatis.annotations.Mapper;
@@ -23,7 +24,13 @@ public interface CategoryMapper {
 
     /**
      * 根据id删除分类
+     * @param categoryDTO
+     */
+    void deleteById(CategoryDTO categoryDTO);
+
+    /**
+     * 修改分类
      * @param category
      */
-    void deleteById(Category category);
+    void update(Category category);
 }

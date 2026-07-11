@@ -3,7 +3,6 @@ package com.sky.controller.admin;
 import com.sky.annotation.Loggable;
 import com.sky.dto.CategoryDTO;
 import com.sky.dto.CategoryPageQueryDTO;
-import com.sky.entity.Category;
 import com.sky.result.PageResult;
 import com.sky.result.Result;
 import com.sky.service.CategoryService;
@@ -49,14 +48,27 @@ public class CategoryController {
 
     /**
      * 根据id删除分类
-     * @param category
+     * @param categoryDTO
      * @return
      */
     @DeleteMapping
     @ApiOperation("根据id删除分类")
     @Loggable
-    public Result delete(Category category){
-        categoryService.deleteById(category);
+    public Result delete(CategoryDTO categoryDTO){
+        categoryService.deleteById(categoryDTO);
+        return Result.success();
+    }
+
+    /**
+     * 修改分类
+     * @param categoryDTO
+     * @return
+     */
+    @PutMapping
+    @ApiOperation("修改分类")
+    @Loggable
+    public Result update(@RequestBody CategoryDTO categoryDTO){
+        categoryService.update(categoryDTO);
         return Result.success();
     }
 }
