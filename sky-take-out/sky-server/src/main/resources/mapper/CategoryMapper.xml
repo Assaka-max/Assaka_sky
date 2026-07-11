@@ -39,4 +39,8 @@
         </where>
         order by create_time desc
     </select>
+
+    <delete id="deleteById" parameterType="com.sky.entity.Category">
+        delete from category where id = #{id}
+    </delete>
 </mapper>

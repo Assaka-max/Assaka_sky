@@ -51,4 +51,13 @@ public class CategoryServiceImpl implements CategoryService {
         List<Category> result = page.getResult();
         return new PageResult(total, result);
     }
+
+    /**
+     * 根据id删除分类
+     * @param category
+     */
+    @Override
+    public void deleteById(Category category) {
+        categoryMapper.deleteById(category);
+    }
 }
