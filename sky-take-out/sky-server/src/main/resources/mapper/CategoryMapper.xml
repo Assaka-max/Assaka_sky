@@ -26,4 +26,17 @@
         #{updateUser}
         )
     </insert>
+
+    <select id="pageQuery" parameterType="com.sky.dto.CategoryPageQueryDTO" resultType="com.sky.entity.Category">
+        select * from category
+        <where>
+            <if test="name != null and name != ''">
+                name like concat('%', #{name}, '%')
+            </if>
+            <if test="type != null">
+                and type like concat('%', #{type}, '%')
+            </if>
+        </where>
+        order by create_time desc
+    </select>
 </mapper>
