@@ -1,5 +1,6 @@
 package com.sky.controller.admin;
 
+import com.sky.annotation.Loggable;
 import com.sky.constant.JwtClaimsConstant;
 import com.sky.dto.EmployeeDTO;
 import com.sky.dto.EmployeeLoginDTO;
@@ -41,6 +42,7 @@ public class EmployeeController {
      */
     @PostMapping("/login")
     @ApiOperation("员工登录")
+    @Loggable
     public Result<EmployeeLoginVO> login(@RequestBody EmployeeLoginDTO employeeLoginDTO) {
         log.info("员工登录：{}", employeeLoginDTO);
 
@@ -71,6 +73,7 @@ public class EmployeeController {
      */
     @PostMapping("/logout")
     @ApiOperation("员工退出登录")
+    @Loggable
     public Result<String> logout() {
         return Result.success();
     }
@@ -83,6 +86,7 @@ public class EmployeeController {
      */
     @PostMapping
     @ApiOperation("新增员工")
+    @Loggable
     public Result save(@RequestBody EmployeeDTO employeeDTO){
         log.info("新增员工:{}", employeeDTO);
         employeeService.save(employeeDTO);
@@ -97,6 +101,7 @@ public class EmployeeController {
      */
     @GetMapping("/page")
     @ApiOperation("员工信息分页查询")
+    @Loggable
     public Result<PageResult> page(EmployeePageQueryDTO employeePageQueryDTO){
         log.info("员工分页查询,参数为:{}", employeePageQueryDTO);
         PageResult pageResult = employeeService.pageQuery(employeePageQueryDTO);
@@ -111,6 +116,7 @@ public class EmployeeController {
      */
     @PostMapping("/status/{status}")
     @ApiOperation("启用或禁用员工账号")
+    @Loggable
     public Result startOrStop(@PathVariable Integer status, Long id){
         log.info("启用或禁用员工账号");
         employeeService.startOrStop(status, id);
@@ -124,6 +130,7 @@ public class EmployeeController {
      */
     @GetMapping("/{id}")
     @ApiOperation("根据id查询员工")
+    @Loggable
     public Result getById(@PathVariable Long id){
         log.info("根据id查询员工, id:{}", id);
         Employee employee = employeeService.getById(id);
@@ -138,6 +145,7 @@ public class EmployeeController {
      */
     @PutMapping
     @ApiOperation("编辑员工信息")
+    @Loggable
     public Result update(@RequestBody EmployeeDTO employeeDTO){
         employeeService.update(employeeDTO);
         return Result.success();
