@@ -87,7 +87,7 @@ public class EmployeeController {
     @PostMapping
     @ApiOperation("新增员工")
     @Loggable
-    public Result save(@RequestBody EmployeeDTO employeeDTO){
+    public Result<String> save(@RequestBody EmployeeDTO employeeDTO){
         log.info("新增员工:{}", employeeDTO);
         employeeService.save(employeeDTO);
         return Result.success();
@@ -117,7 +117,7 @@ public class EmployeeController {
     @PostMapping("/status/{status}")
     @ApiOperation("启用或禁用员工账号")
     @Loggable
-    public Result startOrStop(@PathVariable Integer status, Long id){
+    public Result<String> startOrStop(@PathVariable Integer status, Long id){
         log.info("启用或禁用员工账号");
         employeeService.startOrStop(status, id);
         return Result.success();
@@ -131,7 +131,7 @@ public class EmployeeController {
     @GetMapping("/{id}")
     @ApiOperation("根据id查询员工")
     @Loggable
-    public Result getById(@PathVariable Long id){
+    public Result<Employee> getById(@PathVariable Long id){
         log.info("根据id查询员工, id:{}", id);
         Employee employee = employeeService.getById(id);
         return Result.success(employee);
@@ -146,7 +146,7 @@ public class EmployeeController {
     @PutMapping
     @ApiOperation("编辑员工信息")
     @Loggable
-    public Result update(@RequestBody EmployeeDTO employeeDTO){
+    public Result<String> update(@RequestBody EmployeeDTO employeeDTO){
         employeeService.update(employeeDTO);
         return Result.success();
     }

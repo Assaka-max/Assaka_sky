@@ -68,4 +68,14 @@
         </set>
         where id = #{id}
     </update>
+
+    <select id="list" parameterType="com.sky.entity.Category" resultType="com.sky.entity.Category">
+        select * from category
+        <where>
+            <if test="type != null">
+                type = #{type}
+            </if>
+        </where>
+        order by sort asc,create_time desc
+    </select>
 </mapper>
