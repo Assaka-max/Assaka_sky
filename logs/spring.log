@@ -1,0 +1,328 @@
+2026-07-14 00:10:32.420 [main] INFO  com.sky.SkyServerApplication - Starting SkyServerApplication using Java 17.0.12 on Assaka with PID 27440 (C:\Assaka_sky\sky-take-out\sky-server\target\classes started by 26827 in C:\Assaka_sky)
+2026-07-14 00:10:32.422 [main] INFO  com.sky.SkyServerApplication - The following 1 profile is active: "dev"
+2026-07-14 00:10:33.014 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 00:10:33.017 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-14 00:10:33.037 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2026-07-14 00:10:33.572 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-07-14 00:10:33.577 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-14 00:10:33.578 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2026-07-14 00:10:33.654 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-14 00:10:33.654 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1194 ms
+2026-07-14 00:10:33.762 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-07-14 00:10:33.836 [main] ERROR com.alibaba.druid.pool.DruidDataSource - {dataSource-1} init error
+java.sql.SQLException: ${sky.datasource.driver-class-name}
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:676)
+	at com.alibaba.druid.pool.DruidDataSource.resolveDriver(DruidDataSource.java:1203)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:878)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1930)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1872)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.sky.SkyServerApplication.main(SkyServerApplication.java:10)
+Caused by: java.lang.ClassNotFoundException: ${sky.datasource.driver-class-name}
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:375)
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:674)
+	... 78 common frames omitted
+2026-07-14 00:10:33.838 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoryController': Unsatisfied dependency expressed through field 'categoryService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoryServiceImpl': Unsatisfied dependency expressed through field 'categoryMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoryMapper' defined in file [C:\Assaka_sky\sky-take-out\sky-server\target\classes\com\sky\mapper\CategoryMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: ${sky.datasource.driver-class-name}
+2026-07-14 00:10:33.840 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2026-07-14 00:10:33.854 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-07-14 00:10:33.866 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoryController': Unsatisfied dependency expressed through field 'categoryService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoryServiceImpl': Unsatisfied dependency expressed through field 'categoryMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoryMapper' defined in file [C:\Assaka_sky\sky-take-out\sky-server\target\classes\com\sky\mapper\CategoryMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: ${sky.datasource.driver-class-name}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.sky.SkyServerApplication.main(SkyServerApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoryServiceImpl': Unsatisfied dependency expressed through field 'categoryMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoryMapper' defined in file [C:\Assaka_sky\sky-take-out\sky-server\target\classes\com\sky\mapper\CategoryMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: ${sky.datasource.driver-class-name}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoryMapper' defined in file [C:\Assaka_sky\sky-take-out\sky-server\target\classes\com\sky\mapper\CategoryMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: ${sky.datasource.driver-class-name}
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 34 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: ${sky.datasource.driver-class-name}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 45 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLException: ${sky.datasource.driver-class-name}
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 58 common frames omitted
+Caused by: java.sql.SQLException: ${sky.datasource.driver-class-name}
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:676)
+	at com.alibaba.druid.pool.DruidDataSource.resolveDriver(DruidDataSource.java:1203)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:878)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1930)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1872)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 69 common frames omitted
+Caused by: java.lang.ClassNotFoundException: ${sky.datasource.driver-class-name}
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:375)
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:674)
+	... 78 common frames omitted
+2026-07-14 00:18:21.168 [main] INFO  com.sky.SkyServerApplication - Starting SkyServerApplication using Java 17.0.12 on Assaka with PID 39372 (C:\Assaka_sky\sky-take-out\sky-server\target\classes started by 26827 in C:\Assaka_sky)
+2026-07-14 00:18:21.170 [main] INFO  com.sky.SkyServerApplication - The following 1 profile is active: "dev"
+2026-07-14 00:18:21.695 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 00:18:21.696 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-14 00:18:21.717 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2026-07-14 00:18:22.250 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-07-14 00:18:22.256 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-14 00:18:22.256 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2026-07-14 00:18:22.325 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-14 00:18:22.325 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1126 ms
+2026-07-14 00:18:22.418 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-07-14 00:18:22.504 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-07-14 00:18:22.662 [main] INFO  com.sky.config.OssConfiguration - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-hangzhou.aliyuncs.com, accessKeyId=LTAI5t7iBW4sNCYaWrnQvwSt, accessKeySecret=eTdAUDsD1gBGbU45266OG1O50sNYDM, bucketName=assaka-sky-oss)
+2026-07-14 00:18:22.813 [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-07-14 00:18:22.891 [main] INFO  com.sky.config.WebMvcConfiguration - 扩展消息转换器...
+2026-07-14 00:18:23.331 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-07-14 00:18:23.485 [main] INFO  com.sky.SkyServerApplication - Started SkyServerApplication in 2.647 seconds (JVM running for 2.914)
+2026-07-14 00:18:32.580 [http-nio-8080-exec-3] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-14 00:18:32.580 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-14 00:18:32.582 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-07-14 00:18:32.596 [http-nio-8080-exec-1] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzgzOTYyMTczfQ.BrmpfPvgJSikDbcKNVhphuDJVqTq6HFUxl9yiFUsr80
+2026-07-14 00:18:32.598 [http-nio-8080-exec-3] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/shop/status
+2026-07-14 00:18:32.658 [http-nio-8080-exec-1] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：1
+2026-07-14 00:18:32.672 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[1]
+2026-07-14 00:18:32.815 [http-nio-8080-exec-4] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /ws/2n62l08rp9d
+2026-07-14 00:18:32.838 [http-nio-8080-exec-1] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category WHERE type = ? order by sort asc,create_time desc
+2026-07-14 00:18:32.864 [http-nio-8080-exec-1] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 1(Integer)
+2026-07-14 00:18:32.890 [http-nio-8080-exec-1] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 9
+2026-07-14 00:18:32.892 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:220ms, 返回值:Result(code=1, msg=null, data=[Category(id=24, type=1, name=面食类, sort=1, status=1, createTime=2026-07-11T20:56:59, updateTime=2026-07-11T23:01:09, createUser=1, updateUser=1), Category(id=16, type=1, name=蜀味烤鱼, sort=4, status=1, createTime=2022-06-09T22:15:37, updateTime=2022-08-31T14:27:25, createUser=1, updateUser=1), Category(id=17, type=1, name=蜀味牛蛙, sort=5, status=1, createTime=2022-06-09T22:16:14, updateTime=2022-08-31T14:39:44, createUser=1, updateUser=1), Category(id=18, type=1, name=特色蒸菜, sort=6, status=1, createTime=2022-06-09T22:17:42, updateTime=2022-06-09T22:17:42, createUser=1, updateUser=1), Category(id=19, type=1, name=新鲜时蔬, sort=7, status=1, createTime=2022-06-09T22:18:12, updateTime=2022-06-09T22:18:28, createUser=1, updateUser=1), Category(id=20, type=1, name=水煮鱼, sort=8, status=1, createTime=2022-06-09T22:22:29, updateTime=2022-06-09T22:23:45, createUser=1, updateUser=1), Category(id=12, type=1, name=传统主食, sort=9, status=1, createTime=2022-06-09T22:09:32, updateTime=2022-06-09T22:18:53, createUser=1, updateUser=1), Category(id=11, type=1, name=酒水饮料, sort=10, status=1, createTime=2022-06-09T22:09:18, updateTime=2022-06-09T22:09:18, createUser=1, updateUser=1), Category(id=21, type=1, name=汤类, sort=11, status=1, createTime=2022-06-10T10:51:47, updateTime=2022-06-10T10:51:47, createUser=1, updateUser=1)])
+2026-07-14 00:19:34.926 [http-nio-8080-exec-5] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzgzOTYyMTczfQ.BrmpfPvgJSikDbcKNVhphuDJVqTq6HFUxl9yiFUsr80
+2026-07-14 00:19:34.927 [http-nio-8080-exec-5] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：1
+2026-07-14 00:19:34.928 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:upload, 参数:[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@422c8b7a]
+2026-07-14 00:19:35.708 [http-nio-8080-exec-5] INFO  com.sky.utils.AliOssUtil - 文件上传到:https://assaka-sky-oss.oss-cn-hangzhou.aliyuncs.com/7d098e3b-ee20-48e2-a8bd-5ccabdf64e62.png
+2026-07-14 00:19:35.708 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - 方法:upload 执行完毕, 耗时:780ms, 返回值:Result(code=0, msg=https://assaka-sky-oss.oss-cn-hangzhou.aliyuncs.com/7d098e3b-ee20-48e2-a8bd-5ccabdf64e62.png, data=null)
+2026-07-14 00:19:50.720 [http-nio-8080-exec-7] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzgzOTYyMTczfQ.BrmpfPvgJSikDbcKNVhphuDJVqTq6HFUxl9yiFUsr80
+2026-07-14 00:19:50.723 [http-nio-8080-exec-7] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：1
+2026-07-14 00:19:50.749 [http-nio-8080-exec-7] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:save, 参数:[DishDTO(id=null, name=测试菜品, categoryId=24, price=30, image=null, description=测试测试测试, status=0, flavors=[DishFlavor(id=null, dishId=null, name=甜味, value=["无糖","少糖","半糖","多糖","全糖"]), DishFlavor(id=null, dishId=null, name=温度, value=["热饮","常温","去冰","少冰","多冰"])])]
+2026-07-14 00:19:50.750 [http-nio-8080-exec-7] INFO  com.sky.controller.admin.DishController - 新增菜品
+2026-07-14 00:19:50.755 [http-nio-8080-exec-7] INFO  com.sky.Aspect.AutoFillAspect - 进入公共字段自动填充
+2026-07-14 00:19:50.766 [http-nio-8080-exec-7] ERROR com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 77884
+2026-07-14 00:19:50.771 [http-nio-8080-exec-7] DEBUG com.sky.mapper.DishMapper.insert - ==>  Preparing: insert into dish (name, category_id, price, image, description, create_time, update_time, create_user,update_user, status) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-14 00:19:50.772 [http-nio-8080-exec-7] DEBUG com.sky.mapper.DishMapper.insert - ==> Parameters: 测试菜品(String), 24(Long), 30(BigDecimal), null(String), 测试测试测试(String), 2026-07-14T00:19:50.755998700(LocalDateTime), 2026-07-14T00:19:50.755998700(LocalDateTime), 1(Long), 1(Long), 0(Integer)
+2026-07-14 00:19:50.785 [http-nio-8080-exec-7] DEBUG com.sky.mapper.DishMapper.insert - <==    Updates: 1
+2026-07-14 00:19:50.794 [http-nio-8080-exec-7] DEBUG com.sky.mapper.DishFlavorMapper.insertBatch - ==>  Preparing: insert into dish_flavor (dish_id, name, value) VALUES (?,?,?) , (?,?,?)
+2026-07-14 00:19:50.794 [http-nio-8080-exec-7] DEBUG com.sky.mapper.DishFlavorMapper.insertBatch - ==> Parameters: 70(Long), 甜味(String), ["无糖","少糖","半糖","多糖","全糖"](String), 70(Long), 温度(String), ["热饮","常温","去冰","少冰","多冰"](String)
+2026-07-14 00:19:50.804 [http-nio-8080-exec-7] DEBUG com.sky.mapper.DishFlavorMapper.insertBatch - <==    Updates: 2
+2026-07-14 00:19:50.804 [http-nio-8080-exec-7] INFO  com.sky.Aspect.LogAspect - 方法:save 执行完毕, 耗时:55ms, 返回值:Result(code=1, msg=null, data=null)
+2026-07-14 00:19:51.352 [http-nio-8080-exec-2] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/dish/page
+2026-07-14 00:19:51.356 [http-nio-8080-exec-8] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzgzOTYyMTczfQ.BrmpfPvgJSikDbcKNVhphuDJVqTq6HFUxl9yiFUsr80
+2026-07-14 00:19:51.357 [http-nio-8080-exec-8] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：1
+2026-07-14 00:19:51.357 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[1]
+2026-07-14 00:19:51.357 [http-nio-8080-exec-8] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category WHERE type = ? order by sort asc,create_time desc
+2026-07-14 00:19:51.359 [http-nio-8080-exec-8] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 1(Integer)
+2026-07-14 00:19:51.362 [http-nio-8080-exec-8] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 9
+2026-07-14 00:19:51.362 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:5ms, 返回值:Result(code=1, msg=null, data=[Category(id=24, type=1, name=面食类, sort=1, status=1, createTime=2026-07-11T20:56:59, updateTime=2026-07-11T23:01:09, createUser=1, updateUser=1), Category(id=16, type=1, name=蜀味烤鱼, sort=4, status=1, createTime=2022-06-09T22:15:37, updateTime=2022-08-31T14:27:25, createUser=1, updateUser=1), Category(id=17, type=1, name=蜀味牛蛙, sort=5, status=1, createTime=2022-06-09T22:16:14, updateTime=2022-08-31T14:39:44, createUser=1, updateUser=1), Category(id=18, type=1, name=特色蒸菜, sort=6, status=1, createTime=2022-06-09T22:17:42, updateTime=2022-06-09T22:17:42, createUser=1, updateUser=1), Category(id=19, type=1, name=新鲜时蔬, sort=7, status=1, createTime=2022-06-09T22:18:12, updateTime=2022-06-09T22:18:28, createUser=1, updateUser=1), Category(id=20, type=1, name=水煮鱼, sort=8, status=1, createTime=2022-06-09T22:22:29, updateTime=2022-06-09T22:23:45, createUser=1, updateUser=1), Category(id=12, type=1, name=传统主食, sort=9, status=1, createTime=2022-06-09T22:09:32, updateTime=2022-06-09T22:18:53, createUser=1, updateUser=1), Category(id=11, type=1, name=酒水饮料, sort=10, status=1, createTime=2022-06-09T22:09:18, updateTime=2022-06-09T22:09:18, createUser=1, updateUser=1), Category(id=21, type=1, name=汤类, sort=11, status=1, createTime=2022-06-10T10:51:47, updateTime=2022-06-10T10:51:47, createUser=1, updateUser=1)])
+2026-07-14 00:22:59.298 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2026-07-14 00:22:59.299 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2026-07-14 00:24:21.815 [main] INFO  com.sky.SkyServerApplication - Starting SkyServerApplication using Java 17.0.12 on Assaka with PID 24548 (C:\Assaka_sky\sky-take-out\sky-server\target\classes started by 26827 in C:\Assaka_sky)
+2026-07-14 00:24:21.817 [main] INFO  com.sky.SkyServerApplication - The following 1 profile is active: "dev"
+2026-07-14 00:24:22.394 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-14 00:24:22.396 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-14 00:24:22.418 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2026-07-14 00:24:23.049 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-07-14 00:24:23.056 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-14 00:24:23.056 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2026-07-14 00:24:23.140 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-14 00:24:23.141 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1289 ms
+2026-07-14 00:24:23.248 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-07-14 00:24:23.347 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-07-14 00:24:23.494 [main] INFO  com.sky.config.OssConfiguration - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-hangzhou.aliyuncs.com, accessKeyId=LTAI5t7iBW4sNCYaWrnQvwSt, accessKeySecret=eTdAUDsD1gBGbU45266OG1O50sNYDM, bucketName=assaka-sky-oss)
+2026-07-14 00:24:23.665 [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-07-14 00:24:23.751 [main] INFO  com.sky.config.WebMvcConfiguration - 扩展消息转换器...
+2026-07-14 00:24:24.300 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-07-14 00:24:24.483 [main] INFO  com.sky.SkyServerApplication - Started SkyServerApplication in 3.024 seconds (JVM running for 3.314)
+2026-07-14 00:24:31.166 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-14 00:24:31.167 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-14 00:24:31.167 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-07-14 00:24:31.182 [http-nio-8080-exec-1] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzgzOTYyMTczfQ.BrmpfPvgJSikDbcKNVhphuDJVqTq6HFUxl9yiFUsr80
+2026-07-14 00:24:31.233 [http-nio-8080-exec-1] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：1
+2026-07-14 00:24:31.257 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[1]
+2026-07-14 00:24:31.423 [http-nio-8080-exec-1] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category WHERE type = ? order by sort asc,create_time desc
+2026-07-14 00:24:31.447 [http-nio-8080-exec-1] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 1(Integer)
+2026-07-14 00:24:31.463 [http-nio-8080-exec-1] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 9
+2026-07-14 00:24:31.466 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:209ms, 返回值:Result(code=1, msg=null, data=[Category(id=24, type=1, name=面食类, sort=1, status=1, createTime=2026-07-11T20:56:59, updateTime=2026-07-11T23:01:09, createUser=1, updateUser=1), Category(id=16, type=1, name=蜀味烤鱼, sort=4, status=1, createTime=2022-06-09T22:15:37, updateTime=2022-08-31T14:27:25, createUser=1, updateUser=1), Category(id=17, type=1, name=蜀味牛蛙, sort=5, status=1, createTime=2022-06-09T22:16:14, updateTime=2022-08-31T14:39:44, createUser=1, updateUser=1), Category(id=18, type=1, name=特色蒸菜, sort=6, status=1, createTime=2022-06-09T22:17:42, updateTime=2022-06-09T22:17:42, createUser=1, updateUser=1), Category(id=19, type=1, name=新鲜时蔬, sort=7, status=1, createTime=2022-06-09T22:18:12, updateTime=2022-06-09T22:18:28, createUser=1, updateUser=1), Category(id=20, type=1, name=水煮鱼, sort=8, status=1, createTime=2022-06-09T22:22:29, updateTime=2022-06-09T22:23:45, createUser=1, updateUser=1), Category(id=12, type=1, name=传统主食, sort=9, status=1, createTime=2022-06-09T22:09:32, updateTime=2022-06-09T22:18:53, createUser=1, updateUser=1), Category(id=11, type=1, name=酒水饮料, sort=10, status=1, createTime=2022-06-09T22:09:18, updateTime=2022-06-09T22:09:18, createUser=1, updateUser=1), Category(id=21, type=1, name=汤类, sort=11, status=1, createTime=2022-06-10T10:51:47, updateTime=2022-06-10T10:51:47, createUser=1, updateUser=1)])
+2026-07-14 00:24:52.422 [http-nio-8080-exec-2] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzgzOTYyMTczfQ.BrmpfPvgJSikDbcKNVhphuDJVqTq6HFUxl9yiFUsr80
+2026-07-14 00:24:52.423 [http-nio-8080-exec-2] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：1
+2026-07-14 00:24:52.424 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:upload, 参数:[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@9958b4b]
+2026-07-14 00:24:52.877 [http-nio-8080-exec-2] INFO  com.sky.utils.AliOssUtil - 文件上传到:https://assaka-sky-oss.oss-cn-hangzhou.aliyuncs.com/f1a8a9ca-3cce-4eea-ac4a-d622a0195b15.jpg
+2026-07-14 00:24:52.877 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - 方法:upload 执行完毕, 耗时:453ms, 返回值:Result(code=0, msg=https://assaka-sky-oss.oss-cn-hangzhou.aliyuncs.com/f1a8a9ca-3cce-4eea-ac4a-d622a0195b15.jpg, data=null)
+2026-07-14 00:25:00.068 [http-nio-8080-exec-3] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzgzOTYyMTczfQ.BrmpfPvgJSikDbcKNVhphuDJVqTq6HFUxl9yiFUsr80
+2026-07-14 00:25:00.070 [http-nio-8080-exec-3] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：1
+2026-07-14 00:25:00.096 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:save, 参数:[DishDTO(id=null, name=测试菜品2, categoryId=19, price=20, image=null, description=testtesttest, status=0, flavors=[DishFlavor(id=null, dishId=null, name=辣度, value=["不辣","微辣","中辣","重辣"])])]
+2026-07-14 00:25:00.098 [http-nio-8080-exec-3] INFO  com.sky.controller.admin.DishController - 新增菜品
+2026-07-14 00:25:00.102 [http-nio-8080-exec-3] INFO  com.sky.Aspect.AutoFillAspect - 进入公共字段自动填充
+2026-07-14 00:25:00.103 [http-nio-8080-exec-3] DEBUG com.sky.mapper.DishMapper.insert - ==>  Preparing: insert into dish (name, category_id, price, image, description, create_time, update_time, create_user,update_user, status) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-14 00:25:00.104 [http-nio-8080-exec-3] DEBUG com.sky.mapper.DishMapper.insert - ==> Parameters: 测试菜品2(String), 19(Long), 20(BigDecimal), null(String), testtesttest(String), 2026-07-14T00:25:00.103418300(LocalDateTime), 2026-07-14T00:25:00.103418300(LocalDateTime), 1(Long), 1(Long), 0(Integer)
+2026-07-14 00:25:00.109 [http-nio-8080-exec-3] DEBUG com.sky.mapper.DishMapper.insert - <==    Updates: 1
+2026-07-14 00:25:00.118 [http-nio-8080-exec-3] DEBUG com.sky.mapper.DishFlavorMapper.insertBatch - ==>  Preparing: insert into dish_flavor (dish_id, name, value) VALUES (?,?,?)
+2026-07-14 00:25:00.120 [http-nio-8080-exec-3] DEBUG com.sky.mapper.DishFlavorMapper.insertBatch - ==> Parameters: 71(Long), 辣度(String), ["不辣","微辣","中辣","重辣"](String)
+2026-07-14 00:25:00.124 [http-nio-8080-exec-3] DEBUG com.sky.mapper.DishFlavorMapper.insertBatch - <==    Updates: 1
+2026-07-14 00:25:00.124 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - 方法:save 执行完毕, 耗时:28ms, 返回值:Result(code=1, msg=null, data=null)
+2026-07-14 00:25:00.649 [http-nio-8080-exec-5] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzgzOTYyMTczfQ.BrmpfPvgJSikDbcKNVhphuDJVqTq6HFUxl9yiFUsr80
+2026-07-14 00:25:00.650 [http-nio-8080-exec-5] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：1
+2026-07-14 00:25:00.650 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[1]
+2026-07-14 00:25:00.650 [http-nio-8080-exec-7] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/dish/page
+2026-07-14 00:25:00.651 [http-nio-8080-exec-5] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category WHERE type = ? order by sort asc,create_time desc
+2026-07-14 00:25:00.651 [http-nio-8080-exec-5] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 1(Integer)
+2026-07-14 00:25:00.654 [http-nio-8080-exec-5] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 9
+2026-07-14 00:25:00.654 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:4ms, 返回值:Result(code=1, msg=null, data=[Category(id=24, type=1, name=面食类, sort=1, status=1, createTime=2026-07-11T20:56:59, updateTime=2026-07-11T23:01:09, createUser=1, updateUser=1), Category(id=16, type=1, name=蜀味烤鱼, sort=4, status=1, createTime=2022-06-09T22:15:37, updateTime=2022-08-31T14:27:25, createUser=1, updateUser=1), Category(id=17, type=1, name=蜀味牛蛙, sort=5, status=1, createTime=2022-06-09T22:16:14, updateTime=2022-08-31T14:39:44, createUser=1, updateUser=1), Category(id=18, type=1, name=特色蒸菜, sort=6, status=1, createTime=2022-06-09T22:17:42, updateTime=2022-06-09T22:17:42, createUser=1, updateUser=1), Category(id=19, type=1, name=新鲜时蔬, sort=7, status=1, createTime=2022-06-09T22:18:12, updateTime=2022-06-09T22:18:28, createUser=1, updateUser=1), Category(id=20, type=1, name=水煮鱼, sort=8, status=1, createTime=2022-06-09T22:22:29, updateTime=2022-06-09T22:23:45, createUser=1, updateUser=1), Category(id=12, type=1, name=传统主食, sort=9, status=1, createTime=2022-06-09T22:09:32, updateTime=2022-06-09T22:18:53, createUser=1, updateUser=1), Category(id=11, type=1, name=酒水饮料, sort=10, status=1, createTime=2022-06-09T22:09:18, updateTime=2022-06-09T22:09:18, createUser=1, updateUser=1), Category(id=21, type=1, name=汤类, sort=11, status=1, createTime=2022-06-10T10:51:47, updateTime=2022-06-10T10:51:47, createUser=1, updateUser=1)])
+2026-07-14 00:25:23.713 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2026-07-14 00:25:23.717 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
