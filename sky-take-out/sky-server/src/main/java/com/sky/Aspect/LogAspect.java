@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 @Aspect
@@ -11,7 +12,10 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class LogAspect {
 
-    @Around("@annotation(com.sky.annotation.Loggable)")
+    @Pointcut("execution(* com.sky..*.*(..))")
+    public void logPointCut(){}
+
+    @Around("logPointCut() && @annotation(com.sky.annotation.Loggable)")
     public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable{
         String methodName = joinPoint.getSignature().getName();
         Object [] args = joinPoint.getArgs();
