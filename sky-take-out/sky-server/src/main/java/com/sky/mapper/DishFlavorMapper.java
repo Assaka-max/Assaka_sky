@@ -2,6 +2,7 @@ package com.sky.mapper;
 
 import com.sky.entity.DishFlavor;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -12,4 +13,10 @@ public interface DishFlavorMapper {
      * @param flavors
      */
     void insertBatch(List<DishFlavor> flavors);
+
+    /**
+     * 批量删除口味
+     * @param ids
+     */
+    void deleteBatchByDishIds(@Param("ids") List<Long> ids);
 }
