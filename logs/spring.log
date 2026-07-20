@@ -1034,3 +1034,155 @@ java.lang.ClassCastException: class java.lang.String cannot be cast to class jav
 2026-07-20 16:08:14.296 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:356ms, 返回值:Result(code=1, msg=null, data=1)
 2026-07-20 16:09:34.076 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
 2026-07-20 16:09:34.077 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2026-07-20 19:46:46.818 [main] INFO  com.sky.SkyServerApplication - Starting SkyServerApplication using Java 17.0.12 on Assaka with PID 3488 (C:\Assaka_sky\sky-take-out\sky-server\target\classes started by 26827 in C:\Assaka_sky)
+2026-07-20 19:46:46.819 [main] INFO  com.sky.SkyServerApplication - The following 1 profile is active: "dev"
+2026-07-20 19:46:47.337 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-20 19:46:47.339 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-20 19:46:47.362 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2026-07-20 19:46:47.906 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-07-20 19:46:47.913 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-20 19:46:47.913 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2026-07-20 19:46:47.990 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-20 19:46:47.991 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1139 ms
+2026-07-20 19:46:48.109 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-07-20 19:46:48.230 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-07-20 19:46:48.419 [main] INFO  com.sky.config.OssConfiguration - 开始创建阿里云文件上传工具类对象......
+2026-07-20 19:46:48.599 [main] INFO  com.sky.config.RedisConfiguration - 开始创建redis模板对象...
+2026-07-20 19:46:48.838 [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-07-20 19:46:48.941 [main] INFO  com.sky.config.WebMvcConfiguration - 扩展消息转换器...
+2026-07-20 19:46:49.345 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-07-20 19:46:49.555 [main] INFO  com.sky.SkyServerApplication - Started SkyServerApplication in 3.041 seconds (JVM running for 3.357)
+2026-07-20 19:47:10.098 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-20 19:47:10.098 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-20 19:47:10.099 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-07-20 19:47:10.119 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-20 19:47:10.411 [http-nio-8080-exec-1] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-20 19:47:10.411 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:292ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-20 20:01:12.407 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:login, 参数:[EmployeeLoginDTO(username=admin, password=123456)]
+2026-07-20 20:01:12.409 [http-nio-8080-exec-3] INFO  com.sky.controller.admin.EmployeeController - 员工登录：EmployeeLoginDTO(username=admin, password=123456)
+2026-07-20 20:01:12.517 [http-nio-8080-exec-3] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==>  Preparing: select * from employee where username = ?
+2026-07-20 20:01:12.534 [http-nio-8080-exec-3] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==> Parameters: admin(String)
+2026-07-20 20:01:12.567 [http-nio-8080-exec-3] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - <==      Total: 1
+2026-07-20 20:01:12.595 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - 方法:login 执行完毕, 耗时:188ms, 返回值:Result(code=1, msg=null, data=EmployeeLoginVO(id=1, userName=admin, name=管理员, token=eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzg0NTU2MDcyfQ.Dz0m1phaPhe2GhFG_id6eNccvZsPYMnG_huj5bVCaRM))
+2026-07-20 20:02:29.498 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:login, 参数:[EmployeeLoginDTO(username=admin, password=123456)]
+2026-07-20 20:02:29.498 [http-nio-8080-exec-5] INFO  com.sky.controller.admin.EmployeeController - 员工登录：EmployeeLoginDTO(username=admin, password=123456)
+2026-07-20 20:02:29.507 [http-nio-8080-exec-5] ERROR com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 76959
+2026-07-20 20:02:29.510 [http-nio-8080-exec-5] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==>  Preparing: select * from employee where username = ?
+2026-07-20 20:02:29.510 [http-nio-8080-exec-5] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==> Parameters: admin(String)
+2026-07-20 20:02:29.511 [http-nio-8080-exec-5] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - <==      Total: 1
+2026-07-20 20:02:29.511 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - 方法:login 执行完毕, 耗时:13ms, 返回值:Result(code=1, msg=null, data=EmployeeLoginVO(id=1, userName=admin, name=管理员, token=eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzg0NTU2MTQ5fQ.Jpy9EslYq7VXjuPZwX_BCYYfDe0NLWwIiJS0UJyqt0k))
+2026-07-20 20:43:00.912 [http-nio-8080-exec-10] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-20 20:43:00.923 [http-nio-8080-exec-10] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-20 20:43:00.924 [http-nio-8080-exec-10] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:12ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-20 20:43:12.998 [http-nio-8080-exec-1] WARN  org.springframework.web.servlet.PageNotFound - No mapping for POST /user/user/login
+2026-07-20 20:43:27.173 [http-nio-8080-exec-2] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/order/historyOrders
+2026-07-20 20:43:30.356 [http-nio-8080-exec-3] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/order/historyOrders
+2026-07-20 20:43:44.397 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-20 20:43:44.399 [http-nio-8080-exec-4] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-20 20:43:44.399 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-20 20:43:47.077 [http-nio-8080-exec-5] WARN  org.springframework.web.servlet.PageNotFound - No mapping for POST /user/user/login
+2026-07-20 20:43:49.538 [http-nio-8080-exec-6] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/order/historyOrders
+2026-07-20 20:43:52.713 [http-nio-8080-exec-7] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-20 20:43:52.715 [http-nio-8080-exec-7] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-20 20:43:52.715 [http-nio-8080-exec-7] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-20 20:43:54.686 [http-nio-8080-exec-8] WARN  org.springframework.web.servlet.PageNotFound - No mapping for POST /user/user/login
+2026-07-20 20:44:29.862 [http-nio-8080-exec-9] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-20 20:44:29.863 [http-nio-8080-exec-9] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-20 20:44:29.864 [http-nio-8080-exec-9] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-20 20:45:11.945 [http-nio-8080-exec-10] WARN  org.springframework.web.servlet.PageNotFound - No mapping for POST /user/user/login
+2026-07-20 20:47:58.115 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:login, 参数:[EmployeeLoginDTO(username=admin, password=123456)]
+2026-07-20 20:47:58.115 [http-nio-8080-exec-2] INFO  com.sky.controller.admin.EmployeeController - 员工登录：EmployeeLoginDTO(username=admin, password=123456)
+2026-07-20 20:47:58.128 [http-nio-8080-exec-2] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==>  Preparing: select * from employee where username = ?
+2026-07-20 20:47:58.130 [http-nio-8080-exec-2] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==> Parameters: admin(String)
+2026-07-20 20:47:58.136 [http-nio-8080-exec-2] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - <==      Total: 1
+2026-07-20 20:47:58.137 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - 方法:login 执行完毕, 耗时:22ms, 返回值:Result(code=1, msg=null, data=EmployeeLoginVO(id=1, userName=admin, name=管理员, token=eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzg0NTU4ODc4fQ.SeHJoqxQ2FiKs5sPI8_9iQikGul4DkBDIk0A1DnwlIU))
+2026-07-20 20:48:10.866 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2026-07-20 20:48:10.868 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2026-07-20 20:50:50.572 [main] INFO  com.sky.SkyServerApplication - Starting SkyServerApplication using Java 17.0.12 on Assaka with PID 46220 (C:\Assaka_sky\sky-take-out\sky-server\target\classes started by 26827 in C:\Assaka_sky)
+2026-07-20 20:50:50.574 [main] INFO  com.sky.SkyServerApplication - The following 1 profile is active: "dev"
+2026-07-20 20:50:51.115 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-20 20:50:51.117 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-20 20:50:51.141 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2026-07-20 20:50:51.703 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-07-20 20:50:51.709 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-20 20:50:51.709 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2026-07-20 20:50:51.782 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-20 20:50:51.783 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1178 ms
+2026-07-20 20:50:51.879 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-07-20 20:50:51.966 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-07-20 20:50:52.114 [main] INFO  com.sky.config.OssConfiguration - 开始创建阿里云文件上传工具类对象......
+2026-07-20 20:50:52.260 [main] INFO  com.sky.config.RedisConfiguration - 开始创建redis模板对象...
+2026-07-20 20:50:52.462 [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-07-20 20:50:52.545 [main] INFO  com.sky.config.WebMvcConfiguration - 扩展消息转换器...
+2026-07-20 20:50:52.856 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-07-20 20:50:53.032 [main] INFO  com.sky.SkyServerApplication - Started SkyServerApplication in 2.774 seconds (JVM running for 3.052)
+2026-07-20 20:51:03.927 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-20 20:51:03.927 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-20 20:51:03.929 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-07-20 20:51:03.960 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-20 20:51:04.324 [http-nio-8080-exec-1] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-20 20:51:04.324 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:364ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-20 20:51:12.771 [http-nio-8080-exec-2] WARN  org.springframework.web.servlet.PageNotFound - No mapping for POST /user/user/login
+2026-07-20 20:51:18.155 [http-nio-8080-exec-3] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/order/historyOrders
+2026-07-20 20:51:24.844 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-20 20:51:24.845 [http-nio-8080-exec-4] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-20 20:51:24.846 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-20 20:51:27.565 [http-nio-8080-exec-6] WARN  org.springframework.web.servlet.PageNotFound - No mapping for POST /user/user/login
+2026-07-20 22:11:26.017 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-20 22:11:26.029 [http-nio-8080-exec-5] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-20 22:11:26.029 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:12ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-20 22:27:07.879 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2026-07-20 22:27:07.880 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2026-07-20 22:27:13.159 [main] INFO  com.sky.SkyServerApplication - Starting SkyServerApplication using Java 17.0.12 on Assaka with PID 42276 (C:\Assaka_sky\sky-take-out\sky-server\target\classes started by 26827 in C:\Assaka_sky)
+2026-07-20 22:27:13.161 [main] INFO  com.sky.SkyServerApplication - The following 1 profile is active: "dev"
+2026-07-20 22:27:13.756 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-20 22:27:13.757 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-20 22:27:13.780 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2026-07-20 22:27:14.331 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-07-20 22:27:14.339 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-20 22:27:14.339 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2026-07-20 22:27:14.417 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-20 22:27:14.417 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1225 ms
+2026-07-20 22:27:14.512 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-07-20 22:27:14.597 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-07-20 22:27:14.759 [main] INFO  com.sky.config.OssConfiguration - 开始创建阿里云文件上传工具类对象......
+2026-07-20 22:27:14.893 [main] INFO  com.sky.config.RedisConfiguration - 开始创建redis模板对象...
+2026-07-20 22:27:15.084 [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-07-20 22:27:15.162 [main] INFO  com.sky.config.WebMvcConfiguration - 扩展消息转换器...
+2026-07-20 22:27:15.460 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-07-20 22:27:15.648 [main] INFO  com.sky.SkyServerApplication - Started SkyServerApplication in 2.83 seconds (JVM running for 3.096)
+2026-07-20 22:27:34.043 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-20 22:27:34.043 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-20 22:27:34.045 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-07-20 22:27:34.060 [http-nio-8080-exec-1] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:null
+2026-07-20 22:27:34.072 [http-nio-8080-exec-1] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 令牌不存在或过期
+2026-07-20 22:27:37.217 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:login, 参数:[UserLoginDTO(code=0b1KeB0w3g7Dq73VrE2w3Oa5Y14KeB0S)]
+2026-07-20 22:27:37.220 [http-nio-8080-exec-2] INFO  com.sky.controller.user.UserController - 微信用户登录:0b1KeB0w3g7Dq73VrE2w3Oa5Y14KeB0S
+2026-07-20 22:27:38.456 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.getByOpenid - ==>  Preparing: select * from user where openid = ?
+2026-07-20 22:27:38.471 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.getByOpenid - ==> Parameters: oH3953aBEs4xqw2GFRVwOHVTjCVQ(String)
+2026-07-20 22:27:38.488 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.getByOpenid - <==      Total: 0
+2026-07-20 22:27:38.491 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.insert - ==>  Preparing: insert into user (openid, name, phone, sex, id_number, avatar, create_time) values (?, ?, ?, ?, ?, ?, ?)
+2026-07-20 22:27:38.492 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.insert - ==> Parameters: oH3953aBEs4xqw2GFRVwOHVTjCVQ(String), null, null, null, null, null, 2026-07-20T22:27:38.490061200(LocalDateTime)
+2026-07-20 22:27:38.500 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.insert - <==    Updates: 1
+2026-07-20 22:27:38.517 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - 方法:login 执行完毕, 耗时:1300ms, 返回值:Result(code=1, msg=null, data=UserLoginVO(id=6, openid=oH3953aBEs4xqw2GFRVwOHVTjCVQ, token=eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3ODQ1NjQ4NTgsInVzZXJJZCI6Nn0.2oHLTEA9tvmqkqF3AfKtMzd-28ToQATctCxKAEvwveM))
+2026-07-20 22:27:38.541 [http-nio-8080-exec-3] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/category/list
+2026-07-20 22:27:38.543 [http-nio-8080-exec-4] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/shoppingCart/list
+2026-07-20 22:29:33.724 [http-nio-8080-exec-10] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/order/historyOrders
+2026-07-20 22:29:37.546 [http-nio-8080-exec-8] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:null
+2026-07-20 22:29:37.547 [http-nio-8080-exec-8] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 令牌不存在或过期
+2026-07-20 22:29:37.547 [http-nio-8080-exec-9] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/category/list
+2026-07-20 22:29:37.548 [http-nio-8080-exec-7] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/shoppingCart/list
+2026-07-20 22:30:09.072 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2026-07-20 22:30:09.075 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
