@@ -39,7 +39,7 @@ public class CommonController {
             String extension = originalFileName.substring(originalFileName.lastIndexOf("."));
             String objectName = UUID.randomUUID().toString() + extension;
             String filePath = aliOssUtil.upload(file.getBytes(), objectName);
-            return Result.error(filePath);
+            return Result.success(filePath);
         } catch (IOException e) {
             log.info("文件上传失败");
         }
