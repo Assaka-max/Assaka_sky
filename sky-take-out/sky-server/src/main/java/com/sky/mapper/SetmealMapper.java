@@ -1,5 +1,7 @@
 package com.sky.mapper;
 
+import com.github.pagehelper.Page;
+import com.sky.dto.SetmealPageQueryDTO;
 import com.sky.entity.Setmeal;
 import com.sky.vo.DishItemVO;
 import org.apache.ibatis.annotations.Mapper;
@@ -23,4 +25,11 @@ public interface SetmealMapper {
      * @return
      */
     List<DishItemVO> getDishItemById(@Param("id") Long id);
+
+    /**
+     * 分页查询套餐
+     * @param setmealPageQueryDTO
+     * @return
+     */
+    Page pageQuery(SetmealPageQueryDTO setmealPageQueryDTO);
 }
