@@ -6,6 +6,7 @@ import com.sky.constant.MessageConstant;
 import com.sky.constant.StatusConstant;
 import com.sky.dto.DishDTO;
 import com.sky.dto.DishPageQueryDTO;
+import com.sky.entity.Category;
 import com.sky.entity.Dish;
 import com.sky.entity.DishFlavor;
 import com.sky.exception.DeletionNotAllowedException;
@@ -115,5 +116,19 @@ public class DishServiceImpl implements DishService {
         dishFlavorMapper.deleteBatchByDishIds(dishIds);
         List<DishFlavor> flavors = dishDTO.getFlavors();
         dishFlavorMapper.insertBatch(flavors);
+    }
+
+    @Override
+    public List<DishVO> listWithFlavor(Dish dish) {
+        List<Dish> dishList = dishMapper.list(dish);
+        List<DishVO> dishVOList = new ArrayList<>();
+        for(Dish d : dishList){
+            DishVO dishVO = new DishVO();
+            BeanUtils.copyProperties(d, dishVO);
+            List<DishFlavor> flavors = dishFlavorMapper.getByDishId(d.getId());
+            dishVO.setFlavors(flavors);
+            dishVOList.add(dishVO);
+        }
+        return dishVOList;
     }
 }

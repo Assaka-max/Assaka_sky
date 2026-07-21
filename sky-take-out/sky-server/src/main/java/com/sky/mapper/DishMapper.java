@@ -36,6 +36,13 @@ public interface DishMapper {
     Dish getById(@Param("id") Long id);
 
     /**
+     * 根据分类id查询菜品
+     * @param dish
+     * @return
+     */
+    List<Dish> list(Dish dish);
+
+    /**
      * 批量删除菜品
      * @param ids
      */
