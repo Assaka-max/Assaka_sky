@@ -31,8 +31,8 @@ public class ShopController {
     @ApiOperation("设置营业状态")
     @Loggable
     public Result<String> status(@PathVariable Integer status){
-        log.info("设置营业状态为：{}", status == 1 ? "营业中" : "打烊中");
-        redisTemplate.opsForValue().set(KEY, status.toString());
+        log.info("设置营业状态为：{}", status == 1L ? "营业中" : "打烊中");
+        redisTemplate.opsForValue().set(KEY, status);
         return Result.success();
     }
 

@@ -6,7 +6,7 @@
         select * from shopping_cart
         <where>
             <if test="userId != null">
-                and user_id = #{userId}
+                and user_id = 6
             </if>
             <if test="dishId != null">
                 and dish_id = #{dishId}
@@ -31,4 +31,8 @@
         values
         (#{name}, #{userId}, #{dishId}, #{setmealId}, #{dishFlavor}, #{number}, #{amount}, #{image}, #{createTime})
     </insert>
+
+    <delete id="delete" parameterType="com.sky.dto.ShoppingCartDTO">
+        delete from shopping_cart where id = #{id}
+    </delete>
 </mapper>
