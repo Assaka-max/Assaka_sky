@@ -1298,3 +1298,39 @@ java.sql.SQLException: Column count doesn't match value count at row 1
 2026-07-23 19:02:23.140 [http-nio-8080-exec-9] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=1)
 2026-07-23 19:02:26.109 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
 2026-07-23 19:02:26.113 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2026-07-23 22:50:54.247 [main] INFO  com.sky.SkyServerApplication - Starting SkyServerApplication using Java 17.0.12 on Assaka with PID 32188 (C:\Assaka_sky\sky-take-out\sky-server\target\classes started by 26827 in C:\Assaka_sky)
+2026-07-23 22:50:54.249 [main] INFO  com.sky.SkyServerApplication - The following 1 profile is active: "dev"
+2026-07-23 22:50:54.885 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-23 22:50:54.887 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-23 22:50:54.909 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2026-07-23 22:50:55.469 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-07-23 22:50:55.476 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-23 22:50:55.476 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2026-07-23 22:50:55.550 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-23 22:50:55.550 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1262 ms
+2026-07-23 22:50:55.645 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-07-23 22:50:55.729 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-07-23 22:50:55.912 [main] INFO  com.sky.config.OssConfiguration - 开始创建阿里云文件上传工具类对象......
+2026-07-23 22:50:56.040 [main] INFO  com.sky.config.RedisConfiguration - 开始创建redis模板对象...
+2026-07-23 22:50:56.266 [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-07-23 22:50:56.347 [main] INFO  com.sky.config.WebMvcConfiguration - 扩展消息转换器...
+2026-07-23 22:50:56.662 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-07-23 22:50:56.895 [main] INFO  com.sky.SkyServerApplication - Started SkyServerApplication in 2.991 seconds (JVM running for 3.308)
+2026-07-23 22:51:00.004 [scheduling-1] INFO  com.sky.service.impl.OrderTask - 处理支付超时订单:Thu Jul 23 22:51:00 CST 2026
+2026-07-23 22:51:00.094 [scheduling-1] DEBUG c.sky.mapper.OrderMapper.getByStatusAndOrdertimeLT - ==>  Preparing: select * from orders where status = ? and order_time < ?
+2026-07-23 22:51:00.107 [scheduling-1] DEBUG c.sky.mapper.OrderMapper.getByStatusAndOrdertimeLT - ==> Parameters: 1(Integer), 2026-07-23T22:36:00.007066(LocalDateTime)
+2026-07-23 22:51:00.125 [scheduling-1] DEBUG c.sky.mapper.OrderMapper.getByStatusAndOrdertimeLT - <==      Total: 4
+2026-07-23 22:51:00.140 [scheduling-1] DEBUG com.sky.mapper.OrderMapper.update - ==>  Preparing: update orders SET cancel_reason=?, cancel_time=?, pay_status=?, pay_method=?, status = ? where id = ?
+2026-07-23 22:51:00.141 [scheduling-1] DEBUG com.sky.mapper.OrderMapper.update - ==> Parameters: 支付超时，自动取消(String), 2026-07-23T22:36:00.007066(LocalDateTime), 0(Integer), 1(Integer), 6(Integer), 8(Long)
+2026-07-23 22:51:00.145 [scheduling-1] DEBUG com.sky.mapper.OrderMapper.update - <==    Updates: 1
+2026-07-23 22:51:00.145 [scheduling-1] DEBUG com.sky.mapper.OrderMapper.update - ==>  Preparing: update orders SET cancel_reason=?, cancel_time=?, pay_status=?, pay_method=?, status = ? where id = ?
+2026-07-23 22:51:00.145 [scheduling-1] DEBUG com.sky.mapper.OrderMapper.update - ==> Parameters: 支付超时，自动取消(String), 2026-07-23T22:36:00.007066(LocalDateTime), 0(Integer), 1(Integer), 6(Integer), 9(Long)
+2026-07-23 22:51:00.148 [scheduling-1] DEBUG com.sky.mapper.OrderMapper.update - <==    Updates: 1
+2026-07-23 22:51:00.148 [scheduling-1] DEBUG com.sky.mapper.OrderMapper.update - ==>  Preparing: update orders SET cancel_reason=?, cancel_time=?, pay_status=?, pay_method=?, status = ? where id = ?
+2026-07-23 22:51:00.149 [scheduling-1] DEBUG com.sky.mapper.OrderMapper.update - ==> Parameters: 支付超时，自动取消(String), 2026-07-23T22:36:00.007066(LocalDateTime), 0(Integer), 1(Integer), 6(Integer), 10(Long)
+2026-07-23 22:51:00.151 [scheduling-1] DEBUG com.sky.mapper.OrderMapper.update - <==    Updates: 1
+2026-07-23 22:51:00.151 [scheduling-1] DEBUG com.sky.mapper.OrderMapper.update - ==>  Preparing: update orders SET cancel_reason=?, cancel_time=?, pay_status=?, pay_method=?, status = ? where id = ?
+2026-07-23 22:51:00.151 [scheduling-1] DEBUG com.sky.mapper.OrderMapper.update - ==> Parameters: 支付超时，自动取消(String), 2026-07-23T22:36:00.007066(LocalDateTime), 0(Integer), 1(Integer), 6(Integer), 11(Long)
+2026-07-23 22:51:00.153 [scheduling-1] DEBUG com.sky.mapper.OrderMapper.update - <==    Updates: 1
+2026-07-23 22:51:30.363 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2026-07-23 22:51:30.367 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
