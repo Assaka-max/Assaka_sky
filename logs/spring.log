@@ -913,3 +913,388 @@ java.sql.SQLException: Column count doesn't match value count at row 1
 2026-07-23 12:58:06.129 [http-nio-8080-exec-10] INFO  com.sky.Aspect.LogAspect - 方法:submit 执行完毕, 耗时:44ms, 返回值:Result(code=1, msg=null, data=OrderSubmitVO(id=8, orderNumber=1784782686102, orderAmount=11, orderTime=2026-07-23T12:58:06.102923600))
 2026-07-23 16:42:20.317 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
 2026-07-23 16:42:20.318 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2026-07-23 18:37:43.457 [main] INFO  com.sky.SkyServerApplication - Starting SkyServerApplication using Java 17.0.12 on Assaka with PID 43040 (C:\Assaka_sky\sky-take-out\sky-server\target\classes started by 26827 in C:\Assaka_sky)
+2026-07-23 18:37:43.460 [main] INFO  com.sky.SkyServerApplication - The following 1 profile is active: "dev"
+2026-07-23 18:37:45.041 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-23 18:37:45.043 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-23 18:37:45.065 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2026-07-23 18:37:45.621 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-07-23 18:37:45.628 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-23 18:37:45.628 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2026-07-23 18:37:45.706 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-23 18:37:45.707 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2217 ms
+2026-07-23 18:37:45.806 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-07-23 18:37:45.890 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-07-23 18:37:46.147 [main] INFO  com.sky.config.OssConfiguration - 开始创建阿里云文件上传工具类对象......
+2026-07-23 18:37:46.268 [main] INFO  com.sky.config.RedisConfiguration - 开始创建redis模板对象...
+2026-07-23 18:37:46.494 [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-07-23 18:37:46.589 [main] INFO  com.sky.config.WebMvcConfiguration - 扩展消息转换器...
+2026-07-23 18:37:46.923 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-07-23 18:37:47.152 [main] INFO  com.sky.SkyServerApplication - Started SkyServerApplication in 4.071 seconds (JVM running for 5.259)
+2026-07-23 18:45:58.594 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-23 18:45:58.594 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-23 18:45:58.597 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-07-23 18:45:58.625 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-23 18:45:58.947 [http-nio-8080-exec-1] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-23 18:45:58.947 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:322ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-23 18:46:00.935 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:login, 参数:[UserLoginDTO(code=0b1bov0w3ZtHs73obf1w3mxIE23bov0q)]
+2026-07-23 18:46:00.937 [http-nio-8080-exec-2] INFO  com.sky.controller.user.UserController - 微信用户登录:0b1bov0w3ZtHs73obf1w3mxIE23bov0q
+2026-07-23 18:46:01.958 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.getByOpenid - ==>  Preparing: select * from user where openid = ?
+2026-07-23 18:46:01.973 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.getByOpenid - ==> Parameters: oH3953aBEs4xqw2GFRVwOHVTjCVQ(String)
+2026-07-23 18:46:01.990 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.getByOpenid - <==      Total: 1
+2026-07-23 18:46:02.015 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - 方法:login 执行完毕, 耗时:1080ms, 返回值:Result(code=1, msg=null, data=UserLoginVO(id=6, openid=oH3953aBEs4xqw2GFRVwOHVTjCVQ, token=eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3ODQ4MTA3NjEsInVzZXJJZCI6Nn0.cYkJTrA-xjV34N7XCuOvfi8zE3HSaxG4gK2yOEqW95I))
+2026-07-23 18:46:02.026 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[null]
+2026-07-23 18:46:02.028 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[]
+2026-07-23 18:46:02.046 [http-nio-8080-exec-3] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category order by sort asc,create_time desc
+2026-07-23 18:46:02.047 [http-nio-8080-exec-3] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 
+2026-07-23 18:46:02.051 [http-nio-8080-exec-3] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 13
+2026-07-23 18:46:02.051 [http-nio-8080-exec-4] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 18:46:02.051 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:25ms, 返回值:Result(code=1, msg=null, data=[Category(id=24, type=1, name=面食类, sort=1, status=1, createTime=2026-07-11T20:56:59, updateTime=2026-07-11T23:01:09, createUser=1, updateUser=1), Category(id=22, type=1, name=凉菜, sort=3, status=1, createTime=2022-06-10T11:00, updateTime=2022-06-10T11:00, createUser=1, updateUser=1), Category(id=16, type=1, name=蜀味烤鱼, sort=4, status=1, createTime=2022-06-09T22:15:37, updateTime=2022-08-31T14:27:25, createUser=1, updateUser=1), Category(id=17, type=1, name=蜀味牛蛙, sort=5, status=1, createTime=2022-06-09T22:16:14, updateTime=2022-08-31T14:39:44, createUser=1, updateUser=1), Category(id=18, type=1, name=特色蒸菜, sort=6, status=1, createTime=2022-06-09T22:17:42, updateTime=2022-06-09T22:17:42, createUser=1, updateUser=1), Category(id=19, type=1, name=新鲜时蔬, sort=7, status=1, createTime=2022-06-09T22:18:12, updateTime=2022-06-09T22:18:28, createUser=1, updateUser=1), Category(id=20, type=1, name=水煮鱼, sort=8, status=1, createTime=2022-06-09T22:22:29, updateTime=2022-06-09T22:23:45, createUser=1, updateUser=1), Category(id=12, type=1, name=传统主食, sort=9, status=1, createTime=2022-06-09T22:09:32, updateTime=2022-06-09T22:18:53, createUser=1, updateUser=1), Category(id=11, type=1, name=酒水饮料, sort=10, status=1, createTime=2022-06-09T22:09:18, updateTime=2022-06-09T22:09:18, createUser=1, updateUser=1), Category(id=21, type=1, name=汤类, sort=11, status=1, createTime=2022-06-10T10:51:47, updateTime=2022-06-10T10:51:47, createUser=1, updateUser=1), Category(id=13, type=2, name=人气套餐, sort=12, status=1, createTime=2022-06-09T22:11:38, updateTime=2022-06-10T11:04:40, createUser=1, updateUser=1), Category(id=15, type=2, name=商务套餐, sort=13, status=1, createTime=2022-06-09T22:14:10, updateTime=2022-06-10T11:04:48, createUser=1, updateUser=1), Category(id=23, type=2, name=儿童套餐, sort=20, status=1, createTime=2022-06-10T11:15, updateTime=2022-06-10T11:15, createUser=1, updateUser=1)])
+2026-07-23 18:46:02.052 [http-nio-8080-exec-4] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 18:46:02.052 [http-nio-8080-exec-4] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 2
+2026-07-23 18:46:02.053 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:25ms, 返回值:Result(code=1, msg=null, data=[ShoppingCart(id=22, name=馒头, userId=6, dishId=50, setmealId=null, dishFlavor=null, number=1, amount=1.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png, createTime=2026-07-23T12:45:44), ShoppingCart(id=21, name=米饭, userId=6, dishId=49, setmealId=null, dishFlavor=null, number=1, amount=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, createTime=2026-07-23T12:45:43)])
+2026-07-23 18:46:02.066 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[24]
+2026-07-23 18:46:02.078 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:12ms, 返回值:Result(code=1, msg=null, data=[DishVO(id=49, name=米饭, categoryId=24, price=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, description=精选五常大米, status=1, updateTime=2022-06-10T09:30:17, categoryName=null, flavors=[]), DishVO(id=50, name=馒头, categoryId=24, price=1.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png, description=优质面粉, status=1, updateTime=2022-06-10T09:34:28, categoryName=null, flavors=[])])
+2026-07-23 18:46:04.014 [http-nio-8080-exec-6] DEBUG com.sky.mapper.AddressBookMapper.list - ==>  Preparing: select * from address_book WHERE user_id = ?
+2026-07-23 18:46:04.015 [http-nio-8080-exec-6] DEBUG com.sky.mapper.AddressBookMapper.list - ==> Parameters: 6(Long)
+2026-07-23 18:46:04.017 [http-nio-8080-exec-6] DEBUG com.sky.mapper.AddressBookMapper.list - <==      Total: 1
+2026-07-23 18:46:04.019 [http-nio-8080-exec-7] DEBUG com.sky.mapper.AddressBookMapper.list - ==>  Preparing: select * from address_book WHERE user_id = ? and is_default = ?
+2026-07-23 18:46:04.020 [http-nio-8080-exec-7] DEBUG com.sky.mapper.AddressBookMapper.list - ==> Parameters: 6(Long), 1(Integer)
+2026-07-23 18:46:04.021 [http-nio-8080-exec-7] DEBUG com.sky.mapper.AddressBookMapper.list - <==      Total: 1
+2026-07-23 18:46:12.869 [http-nio-8080-exec-5] DEBUG com.sky.mapper.AddressBookMapper.list - ==>  Preparing: select * from address_book WHERE user_id = ?
+2026-07-23 18:46:12.870 [http-nio-8080-exec-5] DEBUG com.sky.mapper.AddressBookMapper.list - ==> Parameters: 6(Long)
+2026-07-23 18:46:12.872 [http-nio-8080-exec-5] DEBUG com.sky.mapper.AddressBookMapper.list - <==      Total: 1
+2026-07-23 18:46:12.885 [http-nio-8080-exec-9] DEBUG com.sky.mapper.AddressBookMapper.list - ==>  Preparing: select * from address_book WHERE user_id = ? and is_default = ?
+2026-07-23 18:46:12.886 [http-nio-8080-exec-9] DEBUG com.sky.mapper.AddressBookMapper.list - ==> Parameters: 6(Long), 1(Integer)
+2026-07-23 18:46:12.887 [http-nio-8080-exec-9] DEBUG com.sky.mapper.AddressBookMapper.list - <==      Total: 1
+2026-07-23 18:46:15.222 [http-nio-8080-exec-10] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:submit, 参数:[OrdersSubmitDTO(addressBookId=7, payMethod=1, remark=急急急, estimatedDeliveryTime=2026-07-23T19:46, deliveryStatus=0, tablewareNumber=0, tablewareStatus=0, packAmount=2, amount=11)]
+2026-07-23 18:46:15.224 [http-nio-8080-exec-10] INFO  com.sky.controller.user.OrderController - 用户下单:OrdersSubmitDTO(addressBookId=7, payMethod=1, remark=急急急, estimatedDeliveryTime=2026-07-23T19:46, deliveryStatus=0, tablewareNumber=0, tablewareStatus=0, packAmount=2, amount=11)
+2026-07-23 18:46:15.235 [http-nio-8080-exec-10] DEBUG com.sky.mapper.AddressBookMapper.getById - ==>  Preparing: select * from address_book where id = ?
+2026-07-23 18:46:15.235 [http-nio-8080-exec-10] DEBUG com.sky.mapper.AddressBookMapper.getById - ==> Parameters: 7(Long)
+2026-07-23 18:46:15.237 [http-nio-8080-exec-10] DEBUG com.sky.mapper.AddressBookMapper.getById - <==      Total: 1
+2026-07-23 18:46:15.238 [http-nio-8080-exec-10] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 18:46:15.238 [http-nio-8080-exec-10] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 18:46:15.239 [http-nio-8080-exec-10] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 2
+2026-07-23 18:46:15.243 [http-nio-8080-exec-10] DEBUG com.sky.mapper.OrderMapper.insert - ==>  Preparing: insert into orders (number, status, user_id, address_book_id, order_time, checkout_time, pay_method, pay_status, amount, remark, phone, address, consignee, estimated_delivery_time, delivery_status, pack_amount, tableware_number, tableware_status) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-23 18:46:15.244 [http-nio-8080-exec-10] DEBUG com.sky.mapper.OrderMapper.insert - ==> Parameters: 1784803575243(String), 1(Integer), 6(Long), 7(Long), 2026-07-23T18:46:15.243420100(LocalDateTime), null, 1(Integer), 0(Integer), 11(BigDecimal), 急急急(String), 15342357402(String), 202(String), lulu(String), 2026-07-23T19:46(LocalDateTime), 0(Integer), 2(Integer), 0(Integer), 0(Integer)
+2026-07-23 18:46:15.247 [http-nio-8080-exec-10] DEBUG com.sky.mapper.OrderMapper.insert - <==    Updates: 1
+2026-07-23 18:46:15.259 [http-nio-8080-exec-10] DEBUG com.sky.mapper.OrderDetailMapper.insertBatch - ==>  Preparing: insert into order_detail (name, order_id, dish_id, setmeal_id, dish_flavor, number, amount, image) values (?,?,?,?,?, ?,?,?) , (?,?,?,?,?, ?,?,?)
+2026-07-23 18:46:15.260 [http-nio-8080-exec-10] DEBUG com.sky.mapper.OrderDetailMapper.insertBatch - ==> Parameters: 馒头(String), 9(Long), 50(Long), null, null, 1(Integer), 1.00(BigDecimal), https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png(String), 米饭(String), 9(Long), 49(Long), null, null, 1(Integer), 2.00(BigDecimal), https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png(String)
+2026-07-23 18:46:15.260 [http-nio-8080-exec-10] DEBUG com.sky.mapper.OrderDetailMapper.insertBatch - <==    Updates: 2
+2026-07-23 18:46:15.261 [http-nio-8080-exec-10] DEBUG com.sky.mapper.ShoppingCartMapper.delete - ==>  Preparing: delete from shopping_cart where id = ?
+2026-07-23 18:46:15.261 [http-nio-8080-exec-10] DEBUG com.sky.mapper.ShoppingCartMapper.delete - ==> Parameters: 9(Long)
+2026-07-23 18:46:15.261 [http-nio-8080-exec-10] DEBUG com.sky.mapper.ShoppingCartMapper.delete - <==    Updates: 0
+2026-07-23 18:46:15.264 [http-nio-8080-exec-10] INFO  com.sky.Aspect.LogAspect - 方法:submit 执行完毕, 耗时:42ms, 返回值:Result(code=1, msg=null, data=OrderSubmitVO(id=9, orderNumber=1784803575243, orderAmount=11, orderTime=2026-07-23T18:46:15.243420100))
+2026-07-23 18:46:17.646 [http-nio-8080-exec-1] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+2026-07-23 18:48:30.659 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[null]
+2026-07-23 18:48:30.664 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[]
+2026-07-23 18:48:30.675 [http-nio-8080-exec-4] ERROR com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 135401
+2026-07-23 18:48:30.675 [http-nio-8080-exec-8] ERROR com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 148613
+2026-07-23 18:48:30.682 [http-nio-8080-exec-4] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category order by sort asc,create_time desc
+2026-07-23 18:48:30.683 [http-nio-8080-exec-4] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 
+2026-07-23 18:48:30.686 [http-nio-8080-exec-8] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 18:48:30.687 [http-nio-8080-exec-8] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 18:48:30.688 [http-nio-8080-exec-8] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 2
+2026-07-23 18:48:30.688 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:24ms, 返回值:Result(code=1, msg=null, data=[ShoppingCart(id=22, name=馒头, userId=6, dishId=50, setmealId=null, dishFlavor=null, number=1, amount=1.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png, createTime=2026-07-23T12:45:44), ShoppingCart(id=21, name=米饭, userId=6, dishId=49, setmealId=null, dishFlavor=null, number=1, amount=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, createTime=2026-07-23T12:45:43)])
+2026-07-23 18:48:30.689 [http-nio-8080-exec-4] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 13
+2026-07-23 18:48:30.689 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:30ms, 返回值:Result(code=1, msg=null, data=[Category(id=24, type=1, name=面食类, sort=1, status=1, createTime=2026-07-11T20:56:59, updateTime=2026-07-11T23:01:09, createUser=1, updateUser=1), Category(id=22, type=1, name=凉菜, sort=3, status=1, createTime=2022-06-10T11:00, updateTime=2022-06-10T11:00, createUser=1, updateUser=1), Category(id=16, type=1, name=蜀味烤鱼, sort=4, status=1, createTime=2022-06-09T22:15:37, updateTime=2022-08-31T14:27:25, createUser=1, updateUser=1), Category(id=17, type=1, name=蜀味牛蛙, sort=5, status=1, createTime=2022-06-09T22:16:14, updateTime=2022-08-31T14:39:44, createUser=1, updateUser=1), Category(id=18, type=1, name=特色蒸菜, sort=6, status=1, createTime=2022-06-09T22:17:42, updateTime=2022-06-09T22:17:42, createUser=1, updateUser=1), Category(id=19, type=1, name=新鲜时蔬, sort=7, status=1, createTime=2022-06-09T22:18:12, updateTime=2022-06-09T22:18:28, createUser=1, updateUser=1), Category(id=20, type=1, name=水煮鱼, sort=8, status=1, createTime=2022-06-09T22:22:29, updateTime=2022-06-09T22:23:45, createUser=1, updateUser=1), Category(id=12, type=1, name=传统主食, sort=9, status=1, createTime=2022-06-09T22:09:32, updateTime=2022-06-09T22:18:53, createUser=1, updateUser=1), Category(id=11, type=1, name=酒水饮料, sort=10, status=1, createTime=2022-06-09T22:09:18, updateTime=2022-06-09T22:09:18, createUser=1, updateUser=1), Category(id=21, type=1, name=汤类, sort=11, status=1, createTime=2022-06-10T10:51:47, updateTime=2022-06-10T10:51:47, createUser=1, updateUser=1), Category(id=13, type=2, name=人气套餐, sort=12, status=1, createTime=2022-06-09T22:11:38, updateTime=2022-06-10T11:04:40, createUser=1, updateUser=1), Category(id=15, type=2, name=商务套餐, sort=13, status=1, createTime=2022-06-09T22:14:10, updateTime=2022-06-10T11:04:48, createUser=1, updateUser=1), Category(id=23, type=2, name=儿童套餐, sort=20, status=1, createTime=2022-06-10T11:15, updateTime=2022-06-10T11:15, createUser=1, updateUser=1)])
+2026-07-23 18:48:30.701 [http-nio-8080-exec-6] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[24]
+2026-07-23 18:48:30.704 [http-nio-8080-exec-6] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:3ms, 返回值:Result(code=1, msg=null, data=[DishVO(id=49, name=米饭, categoryId=24, price=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, description=精选五常大米, status=1, updateTime=2022-06-10T09:30:17, categoryName=null, flavors=[]), DishVO(id=50, name=馒头, categoryId=24, price=1.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png, description=优质面粉, status=1, updateTime=2022-06-10T09:34:28, categoryName=null, flavors=[])])
+2026-07-23 18:48:32.483 [http-nio-8080-exec-7] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/order/historyOrders
+2026-07-23 18:48:34.203 [http-nio-8080-exec-5] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/order/historyOrders
+2026-07-23 18:51:55.861 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-23 18:51:55.863 [http-nio-8080-exec-1] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-23 18:51:55.863 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-23 18:51:58.513 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:login, 参数:[UserLoginDTO(code=0f1F9TFa1A958M0R0tJa1GnLOB3F9TFv)]
+2026-07-23 18:51:58.515 [http-nio-8080-exec-2] INFO  com.sky.controller.user.UserController - 微信用户登录:0f1F9TFa1A958M0R0tJa1GnLOB3F9TFv
+2026-07-23 18:51:59.371 [http-nio-8080-exec-2] ERROR com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 208687
+2026-07-23 18:51:59.372 [http-nio-8080-exec-2] ERROR com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 208683
+2026-07-23 18:51:59.373 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.getByOpenid - ==>  Preparing: select * from user where openid = ?
+2026-07-23 18:51:59.374 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.getByOpenid - ==> Parameters: oH3953aBEs4xqw2GFRVwOHVTjCVQ(String)
+2026-07-23 18:51:59.374 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.getByOpenid - <==      Total: 1
+2026-07-23 18:51:59.374 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - 方法:login 执行完毕, 耗时:861ms, 返回值:Result(code=1, msg=null, data=UserLoginVO(id=6, openid=oH3953aBEs4xqw2GFRVwOHVTjCVQ, token=eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3ODQ4MTExMTksInVzZXJJZCI6Nn0.4NId8l0Co0ahOeZPqJ90TTBxZNKVcyMGVF23hXQPfTM))
+2026-07-23 18:51:59.384 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[null]
+2026-07-23 18:51:59.385 [http-nio-8080-exec-3] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category order by sort asc,create_time desc
+2026-07-23 18:51:59.385 [http-nio-8080-exec-3] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 
+2026-07-23 18:51:59.386 [http-nio-8080-exec-3] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 13
+2026-07-23 18:51:59.387 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[]
+2026-07-23 18:51:59.387 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:3ms, 返回值:Result(code=1, msg=null, data=[Category(id=24, type=1, name=面食类, sort=1, status=1, createTime=2026-07-11T20:56:59, updateTime=2026-07-11T23:01:09, createUser=1, updateUser=1), Category(id=22, type=1, name=凉菜, sort=3, status=1, createTime=2022-06-10T11:00, updateTime=2022-06-10T11:00, createUser=1, updateUser=1), Category(id=16, type=1, name=蜀味烤鱼, sort=4, status=1, createTime=2022-06-09T22:15:37, updateTime=2022-08-31T14:27:25, createUser=1, updateUser=1), Category(id=17, type=1, name=蜀味牛蛙, sort=5, status=1, createTime=2022-06-09T22:16:14, updateTime=2022-08-31T14:39:44, createUser=1, updateUser=1), Category(id=18, type=1, name=特色蒸菜, sort=6, status=1, createTime=2022-06-09T22:17:42, updateTime=2022-06-09T22:17:42, createUser=1, updateUser=1), Category(id=19, type=1, name=新鲜时蔬, sort=7, status=1, createTime=2022-06-09T22:18:12, updateTime=2022-06-09T22:18:28, createUser=1, updateUser=1), Category(id=20, type=1, name=水煮鱼, sort=8, status=1, createTime=2022-06-09T22:22:29, updateTime=2022-06-09T22:23:45, createUser=1, updateUser=1), Category(id=12, type=1, name=传统主食, sort=9, status=1, createTime=2022-06-09T22:09:32, updateTime=2022-06-09T22:18:53, createUser=1, updateUser=1), Category(id=11, type=1, name=酒水饮料, sort=10, status=1, createTime=2022-06-09T22:09:18, updateTime=2022-06-09T22:09:18, createUser=1, updateUser=1), Category(id=21, type=1, name=汤类, sort=11, status=1, createTime=2022-06-10T10:51:47, updateTime=2022-06-10T10:51:47, createUser=1, updateUser=1), Category(id=13, type=2, name=人气套餐, sort=12, status=1, createTime=2022-06-09T22:11:38, updateTime=2022-06-10T11:04:40, createUser=1, updateUser=1), Category(id=15, type=2, name=商务套餐, sort=13, status=1, createTime=2022-06-09T22:14:10, updateTime=2022-06-10T11:04:48, createUser=1, updateUser=1), Category(id=23, type=2, name=儿童套餐, sort=20, status=1, createTime=2022-06-10T11:15, updateTime=2022-06-10T11:15, createUser=1, updateUser=1)])
+2026-07-23 18:51:59.387 [http-nio-8080-exec-8] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 18:51:59.387 [http-nio-8080-exec-8] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 18:51:59.388 [http-nio-8080-exec-8] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 2
+2026-07-23 18:51:59.388 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:1ms, 返回值:Result(code=1, msg=null, data=[ShoppingCart(id=22, name=馒头, userId=6, dishId=50, setmealId=null, dishFlavor=null, number=1, amount=1.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png, createTime=2026-07-23T12:45:44), ShoppingCart(id=21, name=米饭, userId=6, dishId=49, setmealId=null, dishFlavor=null, number=1, amount=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, createTime=2026-07-23T12:45:43)])
+2026-07-23 18:51:59.399 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[24]
+2026-07-23 18:51:59.401 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=[DishVO(id=49, name=米饭, categoryId=24, price=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, description=精选五常大米, status=1, updateTime=2022-06-10T09:30:17, categoryName=null, flavors=[]), DishVO(id=50, name=馒头, categoryId=24, price=1.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png, description=优质面粉, status=1, updateTime=2022-06-10T09:34:28, categoryName=null, flavors=[])])
+2026-07-23 18:52:24.666 [http-nio-8080-exec-6] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-23 18:52:24.667 [http-nio-8080-exec-6] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-23 18:52:24.668 [http-nio-8080-exec-6] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-23 18:52:27.445 [http-nio-8080-exec-7] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:login, 参数:[UserLoginDTO(code=0d1zhrGa1ZhD8M0Fd2Ia1ozbEh1zhrGa)]
+2026-07-23 18:52:27.446 [http-nio-8080-exec-7] INFO  com.sky.controller.user.UserController - 微信用户登录:0d1zhrGa1ZhD8M0Fd2Ia1ozbEh1zhrGa
+2026-07-23 18:52:27.850 [http-nio-8080-exec-7] DEBUG com.sky.mapper.UserMapper.getByOpenid - ==>  Preparing: select * from user where openid = ?
+2026-07-23 18:52:27.850 [http-nio-8080-exec-7] DEBUG com.sky.mapper.UserMapper.getByOpenid - ==> Parameters: oH3953aBEs4xqw2GFRVwOHVTjCVQ(String)
+2026-07-23 18:52:27.851 [http-nio-8080-exec-7] DEBUG com.sky.mapper.UserMapper.getByOpenid - <==      Total: 1
+2026-07-23 18:52:27.851 [http-nio-8080-exec-7] INFO  com.sky.Aspect.LogAspect - 方法:login 执行完毕, 耗时:406ms, 返回值:Result(code=1, msg=null, data=UserLoginVO(id=6, openid=oH3953aBEs4xqw2GFRVwOHVTjCVQ, token=eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3ODQ4MTExNDcsInVzZXJJZCI6Nn0.j3FRs01WYuSsLO4hURVNvSL-TlFNO58i1G2ZMDmtU7s))
+2026-07-23 18:52:27.860 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[null]
+2026-07-23 18:52:27.860 [http-nio-8080-exec-5] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category order by sort asc,create_time desc
+2026-07-23 18:52:27.860 [http-nio-8080-exec-5] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 
+2026-07-23 18:52:27.863 [http-nio-8080-exec-5] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 13
+2026-07-23 18:52:27.863 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:3ms, 返回值:Result(code=1, msg=null, data=[Category(id=24, type=1, name=面食类, sort=1, status=1, createTime=2026-07-11T20:56:59, updateTime=2026-07-11T23:01:09, createUser=1, updateUser=1), Category(id=22, type=1, name=凉菜, sort=3, status=1, createTime=2022-06-10T11:00, updateTime=2022-06-10T11:00, createUser=1, updateUser=1), Category(id=16, type=1, name=蜀味烤鱼, sort=4, status=1, createTime=2022-06-09T22:15:37, updateTime=2022-08-31T14:27:25, createUser=1, updateUser=1), Category(id=17, type=1, name=蜀味牛蛙, sort=5, status=1, createTime=2022-06-09T22:16:14, updateTime=2022-08-31T14:39:44, createUser=1, updateUser=1), Category(id=18, type=1, name=特色蒸菜, sort=6, status=1, createTime=2022-06-09T22:17:42, updateTime=2022-06-09T22:17:42, createUser=1, updateUser=1), Category(id=19, type=1, name=新鲜时蔬, sort=7, status=1, createTime=2022-06-09T22:18:12, updateTime=2022-06-09T22:18:28, createUser=1, updateUser=1), Category(id=20, type=1, name=水煮鱼, sort=8, status=1, createTime=2022-06-09T22:22:29, updateTime=2022-06-09T22:23:45, createUser=1, updateUser=1), Category(id=12, type=1, name=传统主食, sort=9, status=1, createTime=2022-06-09T22:09:32, updateTime=2022-06-09T22:18:53, createUser=1, updateUser=1), Category(id=11, type=1, name=酒水饮料, sort=10, status=1, createTime=2022-06-09T22:09:18, updateTime=2022-06-09T22:09:18, createUser=1, updateUser=1), Category(id=21, type=1, name=汤类, sort=11, status=1, createTime=2022-06-10T10:51:47, updateTime=2022-06-10T10:51:47, createUser=1, updateUser=1), Category(id=13, type=2, name=人气套餐, sort=12, status=1, createTime=2022-06-09T22:11:38, updateTime=2022-06-10T11:04:40, createUser=1, updateUser=1), Category(id=15, type=2, name=商务套餐, sort=13, status=1, createTime=2022-06-09T22:14:10, updateTime=2022-06-10T11:04:48, createUser=1, updateUser=1), Category(id=23, type=2, name=儿童套餐, sort=20, status=1, createTime=2022-06-10T11:15, updateTime=2022-06-10T11:15, createUser=1, updateUser=1)])
+2026-07-23 18:52:27.864 [http-nio-8080-exec-9] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[]
+2026-07-23 18:52:27.866 [http-nio-8080-exec-9] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 18:52:27.866 [http-nio-8080-exec-9] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 18:52:27.867 [http-nio-8080-exec-9] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 2
+2026-07-23 18:52:27.868 [http-nio-8080-exec-9] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:4ms, 返回值:Result(code=1, msg=null, data=[ShoppingCart(id=22, name=馒头, userId=6, dishId=50, setmealId=null, dishFlavor=null, number=1, amount=1.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png, createTime=2026-07-23T12:45:44), ShoppingCart(id=21, name=米饭, userId=6, dishId=49, setmealId=null, dishFlavor=null, number=1, amount=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, createTime=2026-07-23T12:45:43)])
+2026-07-23 18:52:27.873 [http-nio-8080-exec-10] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[24]
+2026-07-23 18:52:27.876 [http-nio-8080-exec-10] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:3ms, 返回值:Result(code=1, msg=null, data=[DishVO(id=49, name=米饭, categoryId=24, price=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, description=精选五常大米, status=1, updateTime=2022-06-10T09:30:17, categoryName=null, flavors=[]), DishVO(id=50, name=馒头, categoryId=24, price=1.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png, description=优质面粉, status=1, updateTime=2022-06-10T09:34:28, categoryName=null, flavors=[])])
+2026-07-23 18:52:34.971 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:delete, 参数:[ShoppingCartDTO(dishId=50, setmealId=null, dishFlavor=null)]
+2026-07-23 18:52:34.977 [http-nio-8080-exec-1] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 and dish_id = ? order by create_time desc
+2026-07-23 18:52:34.978 [http-nio-8080-exec-1] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 50(Long)
+2026-07-23 18:52:34.979 [http-nio-8080-exec-1] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 1
+2026-07-23 18:52:34.980 [http-nio-8080-exec-1] DEBUG com.sky.mapper.ShoppingCartMapper.delete - ==>  Preparing: delete from shopping_cart where id = ?
+2026-07-23 18:52:34.980 [http-nio-8080-exec-1] DEBUG com.sky.mapper.ShoppingCartMapper.delete - ==> Parameters: 22(Long)
+2026-07-23 18:52:34.984 [http-nio-8080-exec-1] DEBUG com.sky.mapper.ShoppingCartMapper.delete - <==    Updates: 1
+2026-07-23 18:52:34.984 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - 方法:delete 执行完毕, 耗时:13ms, 返回值:Result(code=1, msg=null, data=null)
+2026-07-23 18:52:34.993 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[]
+2026-07-23 18:52:34.994 [http-nio-8080-exec-2] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 18:52:34.995 [http-nio-8080-exec-2] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 18:52:34.996 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[24]
+2026-07-23 18:52:34.997 [http-nio-8080-exec-2] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 1
+2026-07-23 18:52:34.997 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:4ms, 返回值:Result(code=1, msg=null, data=[ShoppingCart(id=21, name=米饭, userId=6, dishId=49, setmealId=null, dishFlavor=null, number=1, amount=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, createTime=2026-07-23T12:45:43)])
+2026-07-23 18:52:34.999 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:3ms, 返回值:Result(code=1, msg=null, data=[DishVO(id=49, name=米饭, categoryId=24, price=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, description=精选五常大米, status=1, updateTime=2022-06-10T09:30:17, categoryName=null, flavors=[]), DishVO(id=50, name=馒头, categoryId=24, price=1.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png, description=优质面粉, status=1, updateTime=2022-06-10T09:34:28, categoryName=null, flavors=[])])
+2026-07-23 18:52:37.079 [http-nio-8080-exec-8] DEBUG com.sky.mapper.AddressBookMapper.list - ==>  Preparing: select * from address_book WHERE user_id = ?
+2026-07-23 18:52:37.080 [http-nio-8080-exec-8] DEBUG com.sky.mapper.AddressBookMapper.list - ==> Parameters: 6(Long)
+2026-07-23 18:52:37.081 [http-nio-8080-exec-8] DEBUG com.sky.mapper.AddressBookMapper.list - <==      Total: 1
+2026-07-23 18:52:37.095 [http-nio-8080-exec-4] DEBUG com.sky.mapper.AddressBookMapper.list - ==>  Preparing: select * from address_book WHERE user_id = ? and is_default = ?
+2026-07-23 18:52:37.095 [http-nio-8080-exec-4] DEBUG com.sky.mapper.AddressBookMapper.list - ==> Parameters: 6(Long), 1(Integer)
+2026-07-23 18:52:37.097 [http-nio-8080-exec-4] DEBUG com.sky.mapper.AddressBookMapper.list - <==      Total: 1
+2026-07-23 18:52:42.408 [http-nio-8080-exec-6] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:submit, 参数:[OrdersSubmitDTO(addressBookId=7, payMethod=1, remark=, estimatedDeliveryTime=2026-07-23T19:52, deliveryStatus=0, tablewareNumber=0, tablewareStatus=0, packAmount=1, amount=9)]
+2026-07-23 18:52:42.408 [http-nio-8080-exec-6] INFO  com.sky.controller.user.OrderController - 用户下单:OrdersSubmitDTO(addressBookId=7, payMethod=1, remark=, estimatedDeliveryTime=2026-07-23T19:52, deliveryStatus=0, tablewareNumber=0, tablewareStatus=0, packAmount=1, amount=9)
+2026-07-23 18:52:42.409 [http-nio-8080-exec-6] DEBUG com.sky.mapper.AddressBookMapper.getById - ==>  Preparing: select * from address_book where id = ?
+2026-07-23 18:52:42.409 [http-nio-8080-exec-6] DEBUG com.sky.mapper.AddressBookMapper.getById - ==> Parameters: 7(Long)
+2026-07-23 18:52:42.411 [http-nio-8080-exec-6] DEBUG com.sky.mapper.AddressBookMapper.getById - <==      Total: 1
+2026-07-23 18:52:42.412 [http-nio-8080-exec-6] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 18:52:42.412 [http-nio-8080-exec-6] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 18:52:42.414 [http-nio-8080-exec-6] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 1
+2026-07-23 18:52:42.415 [http-nio-8080-exec-6] DEBUG com.sky.mapper.OrderMapper.insert - ==>  Preparing: insert into orders (number, status, user_id, address_book_id, order_time, checkout_time, pay_method, pay_status, amount, remark, phone, address, consignee, estimated_delivery_time, delivery_status, pack_amount, tableware_number, tableware_status) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-23 18:52:42.416 [http-nio-8080-exec-6] DEBUG com.sky.mapper.OrderMapper.insert - ==> Parameters: 1784803962415(String), 1(Integer), 6(Long), 7(Long), 2026-07-23T18:52:42.415025700(LocalDateTime), null, 1(Integer), 0(Integer), 9(BigDecimal), (String), 15342357402(String), 202(String), lulu(String), 2026-07-23T19:52(LocalDateTime), 0(Integer), 1(Integer), 0(Integer), 0(Integer)
+2026-07-23 18:52:42.417 [http-nio-8080-exec-6] DEBUG com.sky.mapper.OrderMapper.insert - <==    Updates: 1
+2026-07-23 18:52:42.418 [http-nio-8080-exec-6] DEBUG com.sky.mapper.OrderDetailMapper.insertBatch - ==>  Preparing: insert into order_detail (name, order_id, dish_id, setmeal_id, dish_flavor, number, amount, image) values (?,?,?,?,?, ?,?,?)
+2026-07-23 18:52:42.418 [http-nio-8080-exec-6] DEBUG com.sky.mapper.OrderDetailMapper.insertBatch - ==> Parameters: 米饭(String), 10(Long), 49(Long), null, null, 1(Integer), 2.00(BigDecimal), https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png(String)
+2026-07-23 18:52:42.419 [http-nio-8080-exec-6] DEBUG com.sky.mapper.OrderDetailMapper.insertBatch - <==    Updates: 1
+2026-07-23 18:52:42.420 [http-nio-8080-exec-6] DEBUG com.sky.mapper.ShoppingCartMapper.delete - ==>  Preparing: delete from shopping_cart where id = ?
+2026-07-23 18:52:42.420 [http-nio-8080-exec-6] DEBUG com.sky.mapper.ShoppingCartMapper.delete - ==> Parameters: 10(Long)
+2026-07-23 18:52:42.420 [http-nio-8080-exec-6] DEBUG com.sky.mapper.ShoppingCartMapper.delete - <==    Updates: 0
+2026-07-23 18:52:42.423 [http-nio-8080-exec-6] INFO  com.sky.Aspect.LogAspect - 方法:submit 执行完毕, 耗时:15ms, 返回值:Result(code=1, msg=null, data=OrderSubmitVO(id=10, orderNumber=1784803962415, orderAmount=9, orderTime=2026-07-23T18:52:42.415025700))
+2026-07-23 18:52:44.881 [http-nio-8080-exec-7] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+2026-07-23 18:57:56.577 [http-nio-8080-exec-10] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-23 18:57:56.579 [http-nio-8080-exec-10] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-23 18:57:56.579 [http-nio-8080-exec-10] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-23 18:58:00.776 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:login, 参数:[UserLoginDTO(code=0a1DjC1w3MdOt73wcE3w3W8QDw4DjC1p)]
+2026-07-23 18:58:00.776 [http-nio-8080-exec-1] INFO  com.sky.controller.user.UserController - 微信用户登录:0a1DjC1w3MdOt73wcE3w3W8QDw4DjC1p
+2026-07-23 18:58:01.589 [http-nio-8080-exec-1] ERROR com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 319166
+2026-07-23 18:58:01.591 [http-nio-8080-exec-1] DEBUG com.sky.mapper.UserMapper.getByOpenid - ==>  Preparing: select * from user where openid = ?
+2026-07-23 18:58:01.592 [http-nio-8080-exec-1] DEBUG com.sky.mapper.UserMapper.getByOpenid - ==> Parameters: oH3953aBEs4xqw2GFRVwOHVTjCVQ(String)
+2026-07-23 18:58:01.593 [http-nio-8080-exec-1] DEBUG com.sky.mapper.UserMapper.getByOpenid - <==      Total: 1
+2026-07-23 18:58:01.594 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - 方法:login 执行完毕, 耗时:818ms, 返回值:Result(code=1, msg=null, data=UserLoginVO(id=6, openid=oH3953aBEs4xqw2GFRVwOHVTjCVQ, token=eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3ODQ4MTE0ODEsInVzZXJJZCI6Nn0.7RM3xOpFy0nP5tRL1DoqQzHwMQ4FbyHyNprNbbzlMXc))
+2026-07-23 18:58:01.605 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[null]
+2026-07-23 18:58:01.606 [http-nio-8080-exec-2] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category order by sort asc,create_time desc
+2026-07-23 18:58:01.606 [http-nio-8080-exec-2] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 
+2026-07-23 18:58:01.607 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[]
+2026-07-23 18:58:01.608 [http-nio-8080-exec-2] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 13
+2026-07-23 18:58:01.608 [http-nio-8080-exec-3] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 18:58:01.608 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:3ms, 返回值:Result(code=1, msg=null, data=[Category(id=24, type=1, name=面食类, sort=1, status=1, createTime=2026-07-11T20:56:59, updateTime=2026-07-11T23:01:09, createUser=1, updateUser=1), Category(id=22, type=1, name=凉菜, sort=3, status=1, createTime=2022-06-10T11:00, updateTime=2022-06-10T11:00, createUser=1, updateUser=1), Category(id=16, type=1, name=蜀味烤鱼, sort=4, status=1, createTime=2022-06-09T22:15:37, updateTime=2022-08-31T14:27:25, createUser=1, updateUser=1), Category(id=17, type=1, name=蜀味牛蛙, sort=5, status=1, createTime=2022-06-09T22:16:14, updateTime=2022-08-31T14:39:44, createUser=1, updateUser=1), Category(id=18, type=1, name=特色蒸菜, sort=6, status=1, createTime=2022-06-09T22:17:42, updateTime=2022-06-09T22:17:42, createUser=1, updateUser=1), Category(id=19, type=1, name=新鲜时蔬, sort=7, status=1, createTime=2022-06-09T22:18:12, updateTime=2022-06-09T22:18:28, createUser=1, updateUser=1), Category(id=20, type=1, name=水煮鱼, sort=8, status=1, createTime=2022-06-09T22:22:29, updateTime=2022-06-09T22:23:45, createUser=1, updateUser=1), Category(id=12, type=1, name=传统主食, sort=9, status=1, createTime=2022-06-09T22:09:32, updateTime=2022-06-09T22:18:53, createUser=1, updateUser=1), Category(id=11, type=1, name=酒水饮料, sort=10, status=1, createTime=2022-06-09T22:09:18, updateTime=2022-06-09T22:09:18, createUser=1, updateUser=1), Category(id=21, type=1, name=汤类, sort=11, status=1, createTime=2022-06-10T10:51:47, updateTime=2022-06-10T10:51:47, createUser=1, updateUser=1), Category(id=13, type=2, name=人气套餐, sort=12, status=1, createTime=2022-06-09T22:11:38, updateTime=2022-06-10T11:04:40, createUser=1, updateUser=1), Category(id=15, type=2, name=商务套餐, sort=13, status=1, createTime=2022-06-09T22:14:10, updateTime=2022-06-10T11:04:48, createUser=1, updateUser=1), Category(id=23, type=2, name=儿童套餐, sort=20, status=1, createTime=2022-06-10T11:15, updateTime=2022-06-10T11:15, createUser=1, updateUser=1)])
+2026-07-23 18:58:01.608 [http-nio-8080-exec-3] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 18:58:01.609 [http-nio-8080-exec-3] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 1
+2026-07-23 18:58:01.609 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=[ShoppingCart(id=21, name=米饭, userId=6, dishId=49, setmealId=null, dishFlavor=null, number=1, amount=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, createTime=2026-07-23T12:45:43)])
+2026-07-23 18:58:01.618 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[24]
+2026-07-23 18:58:01.620 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=[DishVO(id=49, name=米饭, categoryId=24, price=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, description=精选五常大米, status=1, updateTime=2022-06-10T09:30:17, categoryName=null, flavors=[]), DishVO(id=50, name=馒头, categoryId=24, price=1.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png, description=优质面粉, status=1, updateTime=2022-06-10T09:34:28, categoryName=null, flavors=[])])
+2026-07-23 18:58:02.858 [http-nio-8080-exec-4] DEBUG com.sky.mapper.AddressBookMapper.list - ==>  Preparing: select * from address_book WHERE user_id = ?
+2026-07-23 18:58:02.859 [http-nio-8080-exec-4] DEBUG com.sky.mapper.AddressBookMapper.list - ==> Parameters: 6(Long)
+2026-07-23 18:58:02.860 [http-nio-8080-exec-4] DEBUG com.sky.mapper.AddressBookMapper.list - <==      Total: 1
+2026-07-23 18:58:02.872 [http-nio-8080-exec-6] DEBUG com.sky.mapper.AddressBookMapper.list - ==>  Preparing: select * from address_book WHERE user_id = ? and is_default = ?
+2026-07-23 18:58:02.873 [http-nio-8080-exec-6] DEBUG com.sky.mapper.AddressBookMapper.list - ==> Parameters: 6(Long), 1(Integer)
+2026-07-23 18:58:02.875 [http-nio-8080-exec-6] DEBUG com.sky.mapper.AddressBookMapper.list - <==      Total: 1
+2026-07-23 18:58:04.068 [http-nio-8080-exec-7] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:submit, 参数:[OrdersSubmitDTO(addressBookId=7, payMethod=1, remark=, estimatedDeliveryTime=2026-07-23T19:58, deliveryStatus=0, tablewareNumber=0, tablewareStatus=0, packAmount=1, amount=9)]
+2026-07-23 18:58:04.068 [http-nio-8080-exec-7] INFO  com.sky.controller.user.OrderController - 用户下单:OrdersSubmitDTO(addressBookId=7, payMethod=1, remark=, estimatedDeliveryTime=2026-07-23T19:58, deliveryStatus=0, tablewareNumber=0, tablewareStatus=0, packAmount=1, amount=9)
+2026-07-23 18:58:04.069 [http-nio-8080-exec-7] DEBUG com.sky.mapper.AddressBookMapper.getById - ==>  Preparing: select * from address_book where id = ?
+2026-07-23 18:58:04.069 [http-nio-8080-exec-7] DEBUG com.sky.mapper.AddressBookMapper.getById - ==> Parameters: 7(Long)
+2026-07-23 18:58:04.070 [http-nio-8080-exec-7] DEBUG com.sky.mapper.AddressBookMapper.getById - <==      Total: 1
+2026-07-23 18:58:04.071 [http-nio-8080-exec-7] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 18:58:04.071 [http-nio-8080-exec-7] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 18:58:04.072 [http-nio-8080-exec-7] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 1
+2026-07-23 18:58:04.073 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.insert - ==>  Preparing: insert into orders (number, status, user_id, address_book_id, order_time, checkout_time, pay_method, pay_status, amount, remark, phone, address, consignee, estimated_delivery_time, delivery_status, pack_amount, tableware_number, tableware_status) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-23 18:58:04.073 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.insert - ==> Parameters: 1784804284073(String), 1(Integer), 6(Long), 7(Long), 2026-07-23T18:58:04.073530(LocalDateTime), null, 1(Integer), 0(Integer), 9(BigDecimal), (String), 15342357402(String), 202(String), lulu(String), 2026-07-23T19:58(LocalDateTime), 0(Integer), 1(Integer), 0(Integer), 0(Integer)
+2026-07-23 18:58:04.075 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.insert - <==    Updates: 1
+2026-07-23 18:58:04.076 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderDetailMapper.insertBatch - ==>  Preparing: insert into order_detail (name, order_id, dish_id, setmeal_id, dish_flavor, number, amount, image) values (?,?,?,?,?, ?,?,?)
+2026-07-23 18:58:04.077 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderDetailMapper.insertBatch - ==> Parameters: 米饭(String), 11(Long), 49(Long), null, null, 1(Integer), 2.00(BigDecimal), https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png(String)
+2026-07-23 18:58:04.078 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderDetailMapper.insertBatch - <==    Updates: 1
+2026-07-23 18:58:04.078 [http-nio-8080-exec-7] DEBUG com.sky.mapper.ShoppingCartMapper.delete - ==>  Preparing: delete from shopping_cart where id = ?
+2026-07-23 18:58:04.078 [http-nio-8080-exec-7] DEBUG com.sky.mapper.ShoppingCartMapper.delete - ==> Parameters: 11(Long)
+2026-07-23 18:58:04.079 [http-nio-8080-exec-7] DEBUG com.sky.mapper.ShoppingCartMapper.delete - <==    Updates: 0
+2026-07-23 18:58:04.081 [http-nio-8080-exec-7] INFO  com.sky.Aspect.LogAspect - 方法:submit 执行完毕, 耗时:13ms, 返回值:Result(code=1, msg=null, data=OrderSubmitVO(id=11, orderNumber=1784804284073, orderAmount=9, orderTime=2026-07-23T18:58:04.073530))
+2026-07-23 18:58:05.919 [http-nio-8080-exec-5] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+2026-07-23 18:58:23.041 [http-nio-8080-exec-9] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+2026-07-23 18:58:23.500 [http-nio-8080-exec-10] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+2026-07-23 19:01:35.067 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2026-07-23 19:01:35.069 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2026-07-23 19:01:37.571 [main] INFO  com.sky.SkyServerApplication - Starting SkyServerApplication using Java 17.0.12 on Assaka with PID 45292 (C:\Assaka_sky\sky-take-out\sky-server\target\classes started by 26827 in C:\Assaka_sky)
+2026-07-23 19:01:37.572 [main] INFO  com.sky.SkyServerApplication - The following 1 profile is active: "dev"
+2026-07-23 19:01:38.105 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-23 19:01:38.107 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-23 19:01:38.127 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2026-07-23 19:01:38.767 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-07-23 19:01:38.774 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-23 19:01:38.774 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2026-07-23 19:01:38.846 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-23 19:01:38.847 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1241 ms
+2026-07-23 19:01:38.950 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-07-23 19:01:39.052 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-07-23 19:01:39.239 [main] INFO  com.sky.config.OssConfiguration - 开始创建阿里云文件上传工具类对象......
+2026-07-23 19:01:39.359 [main] INFO  com.sky.config.RedisConfiguration - 开始创建redis模板对象...
+2026-07-23 19:01:39.607 [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-07-23 19:01:39.696 [main] INFO  com.sky.config.WebMvcConfiguration - 扩展消息转换器...
+2026-07-23 19:01:40.020 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-07-23 19:01:40.266 [main] INFO  com.sky.SkyServerApplication - Started SkyServerApplication in 3.005 seconds (JVM running for 3.251)
+2026-07-23 19:01:44.266 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-23 19:01:44.266 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-23 19:01:44.267 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-07-23 19:01:44.302 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-23 19:01:44.609 [http-nio-8080-exec-1] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-23 19:01:44.609 [http-nio-8080-exec-1] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:307ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-23 19:01:49.955 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:login, 参数:[UserLoginDTO(code=0c1opj0003eyMW1ChY100HhCa51opj0X)]
+2026-07-23 19:01:49.956 [http-nio-8080-exec-2] INFO  com.sky.controller.user.UserController - 微信用户登录:0c1opj0003eyMW1ChY100HhCa51opj0X
+2026-07-23 19:01:51.364 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.getByOpenid - ==>  Preparing: select * from user where openid = ?
+2026-07-23 19:01:51.378 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.getByOpenid - ==> Parameters: oH3953aBEs4xqw2GFRVwOHVTjCVQ(String)
+2026-07-23 19:01:51.394 [http-nio-8080-exec-2] DEBUG com.sky.mapper.UserMapper.getByOpenid - <==      Total: 1
+2026-07-23 19:01:51.411 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - 方法:login 执行完毕, 耗时:1456ms, 返回值:Result(code=1, msg=null, data=UserLoginVO(id=6, openid=oH3953aBEs4xqw2GFRVwOHVTjCVQ, token=eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3ODQ4MTE3MTEsInVzZXJJZCI6Nn0.TxtxU1q2LvQt1udP5ByrXIDsdFEaizYU8JU1A18kq3Q))
+2026-07-23 19:01:51.420 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[null]
+2026-07-23 19:01:51.422 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[]
+2026-07-23 19:01:51.433 [http-nio-8080-exec-3] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category order by sort asc,create_time desc
+2026-07-23 19:01:51.434 [http-nio-8080-exec-3] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 
+2026-07-23 19:01:51.435 [http-nio-8080-exec-4] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 19:01:51.436 [http-nio-8080-exec-4] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 19:01:51.436 [http-nio-8080-exec-3] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 13
+2026-07-23 19:01:51.436 [http-nio-8080-exec-4] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 1
+2026-07-23 19:01:51.436 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:16ms, 返回值:Result(code=1, msg=null, data=[Category(id=24, type=1, name=面食类, sort=1, status=1, createTime=2026-07-11T20:56:59, updateTime=2026-07-11T23:01:09, createUser=1, updateUser=1), Category(id=22, type=1, name=凉菜, sort=3, status=1, createTime=2022-06-10T11:00, updateTime=2022-06-10T11:00, createUser=1, updateUser=1), Category(id=16, type=1, name=蜀味烤鱼, sort=4, status=1, createTime=2022-06-09T22:15:37, updateTime=2022-08-31T14:27:25, createUser=1, updateUser=1), Category(id=17, type=1, name=蜀味牛蛙, sort=5, status=1, createTime=2022-06-09T22:16:14, updateTime=2022-08-31T14:39:44, createUser=1, updateUser=1), Category(id=18, type=1, name=特色蒸菜, sort=6, status=1, createTime=2022-06-09T22:17:42, updateTime=2022-06-09T22:17:42, createUser=1, updateUser=1), Category(id=19, type=1, name=新鲜时蔬, sort=7, status=1, createTime=2022-06-09T22:18:12, updateTime=2022-06-09T22:18:28, createUser=1, updateUser=1), Category(id=20, type=1, name=水煮鱼, sort=8, status=1, createTime=2022-06-09T22:22:29, updateTime=2022-06-09T22:23:45, createUser=1, updateUser=1), Category(id=12, type=1, name=传统主食, sort=9, status=1, createTime=2022-06-09T22:09:32, updateTime=2022-06-09T22:18:53, createUser=1, updateUser=1), Category(id=11, type=1, name=酒水饮料, sort=10, status=1, createTime=2022-06-09T22:09:18, updateTime=2022-06-09T22:09:18, createUser=1, updateUser=1), Category(id=21, type=1, name=汤类, sort=11, status=1, createTime=2022-06-10T10:51:47, updateTime=2022-06-10T10:51:47, createUser=1, updateUser=1), Category(id=13, type=2, name=人气套餐, sort=12, status=1, createTime=2022-06-09T22:11:38, updateTime=2022-06-10T11:04:40, createUser=1, updateUser=1), Category(id=15, type=2, name=商务套餐, sort=13, status=1, createTime=2022-06-09T22:14:10, updateTime=2022-06-10T11:04:48, createUser=1, updateUser=1), Category(id=23, type=2, name=儿童套餐, sort=20, status=1, createTime=2022-06-10T11:15, updateTime=2022-06-10T11:15, createUser=1, updateUser=1)])
+2026-07-23 19:01:51.436 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:14ms, 返回值:Result(code=1, msg=null, data=[ShoppingCart(id=21, name=米饭, userId=6, dishId=49, setmealId=null, dishFlavor=null, number=1, amount=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, createTime=2026-07-23T12:45:43)])
+2026-07-23 19:01:51.448 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[24]
+2026-07-23 19:01:51.455 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:7ms, 返回值:Result(code=1, msg=null, data=[DishVO(id=49, name=米饭, categoryId=24, price=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, description=精选五常大米, status=1, updateTime=2022-06-10T09:30:17, categoryName=null, flavors=[]), DishVO(id=50, name=馒头, categoryId=24, price=1.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png, description=优质面粉, status=1, updateTime=2022-06-10T09:34:28, categoryName=null, flavors=[])])
+2026-07-23 19:01:52.763 [http-nio-8080-exec-6] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[17]
+2026-07-23 19:01:52.766 [http-nio-8080-exec-6] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:3ms, 返回值:Result(code=1, msg=null, data=[DishVO(id=62, name=金汤酸菜牛蛙, categoryId=17, price=88.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/7694a5d8-7938-4e9d-8b9e-2075983a2e38.png, description=原料：鲜活牛蛙，酸菜, status=1, updateTime=2022-06-10T10:33:05, categoryName=null, flavors=[]), DishVO(id=63, name=香锅牛蛙, categoryId=17, price=88.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/f5ac8455-4793-450c-97ba-173795c34626.png, description=配料：鲜活牛蛙，莲藕，青笋, status=1, updateTime=2022-06-10T10:35:40, categoryName=null, flavors=[]), DishVO(id=64, name=馋嘴牛蛙, categoryId=17, price=88.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/7a55b845-1f2b-41fa-9486-76d187ee9ee1.png, description=配料：鲜活牛蛙，丝瓜，黄豆芽, status=1, updateTime=2022-06-10T10:37:52, categoryName=null, flavors=[])])
+2026-07-23 19:01:54.178 [http-nio-8080-exec-10] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:add, 参数:[ShoppingCartDTO(dishId=63, setmealId=null, dishFlavor=null)]
+2026-07-23 19:01:54.183 [http-nio-8080-exec-10] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 and dish_id = ? order by create_time desc
+2026-07-23 19:01:54.184 [http-nio-8080-exec-10] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 63(Long)
+2026-07-23 19:01:54.187 [http-nio-8080-exec-10] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 0
+2026-07-23 19:01:54.188 [http-nio-8080-exec-10] DEBUG com.sky.mapper.DishMapper.getById - ==>  Preparing: select * from dish where id = ?
+2026-07-23 19:01:54.188 [http-nio-8080-exec-10] DEBUG com.sky.mapper.DishMapper.getById - ==> Parameters: 63(Long)
+2026-07-23 19:01:54.189 [http-nio-8080-exec-10] DEBUG com.sky.mapper.DishMapper.getById - <==      Total: 1
+2026-07-23 19:01:54.190 [http-nio-8080-exec-10] DEBUG com.sky.mapper.ShoppingCartMapper.insert - ==>  Preparing: insert into shopping_cart (name, user_id, dish_id, setmeal_id, dish_flavor, number, amount, image, create_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-23 19:01:54.191 [http-nio-8080-exec-10] DEBUG com.sky.mapper.ShoppingCartMapper.insert - ==> Parameters: 香锅牛蛙(String), 6(Long), 63(Long), null, null, 1(Integer), 88.00(BigDecimal), https://sky-itcast.oss-cn-beijing.aliyuncs.com/f5ac8455-4793-450c-97ba-173795c34626.png(String), 2026-07-23T19:01:54.190661300(LocalDateTime)
+2026-07-23 19:01:54.197 [http-nio-8080-exec-10] DEBUG com.sky.mapper.ShoppingCartMapper.insert - <==    Updates: 1
+2026-07-23 19:01:54.198 [http-nio-8080-exec-10] INFO  com.sky.Aspect.LogAspect - 方法:add 执行完毕, 耗时:20ms, 返回值:Result(code=1, msg=null, data=null)
+2026-07-23 19:01:54.208 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[]
+2026-07-23 19:01:54.209 [http-nio-8080-exec-8] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 19:01:54.209 [http-nio-8080-exec-8] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 19:01:54.209 [http-nio-8080-exec-9] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[17]
+2026-07-23 19:01:54.211 [http-nio-8080-exec-8] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 2
+2026-07-23 19:01:54.212 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:4ms, 返回值:Result(code=1, msg=null, data=[ShoppingCart(id=23, name=香锅牛蛙, userId=6, dishId=63, setmealId=null, dishFlavor=null, number=1, amount=88.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/f5ac8455-4793-450c-97ba-173795c34626.png, createTime=2026-07-23T19:01:54), ShoppingCart(id=21, name=米饭, userId=6, dishId=49, setmealId=null, dishFlavor=null, number=1, amount=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, createTime=2026-07-23T12:45:43)])
+2026-07-23 19:01:54.213 [http-nio-8080-exec-9] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:4ms, 返回值:Result(code=1, msg=null, data=[DishVO(id=62, name=金汤酸菜牛蛙, categoryId=17, price=88.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/7694a5d8-7938-4e9d-8b9e-2075983a2e38.png, description=原料：鲜活牛蛙，酸菜, status=1, updateTime=2022-06-10T10:33:05, categoryName=null, flavors=[]), DishVO(id=63, name=香锅牛蛙, categoryId=17, price=88.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/f5ac8455-4793-450c-97ba-173795c34626.png, description=配料：鲜活牛蛙，莲藕，青笋, status=1, updateTime=2022-06-10T10:35:40, categoryName=null, flavors=[]), DishVO(id=64, name=馋嘴牛蛙, categoryId=17, price=88.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/7a55b845-1f2b-41fa-9486-76d187ee9ee1.png, description=配料：鲜活牛蛙，丝瓜，黄豆芽, status=1, updateTime=2022-06-10T10:37:52, categoryName=null, flavors=[])])
+2026-07-23 19:01:55.497 [http-nio-8080-exec-7] DEBUG com.sky.mapper.AddressBookMapper.list - ==>  Preparing: select * from address_book WHERE user_id = ?
+2026-07-23 19:01:55.497 [http-nio-8080-exec-7] DEBUG com.sky.mapper.AddressBookMapper.list - ==> Parameters: 6(Long)
+2026-07-23 19:01:55.498 [http-nio-8080-exec-7] DEBUG com.sky.mapper.AddressBookMapper.list - <==      Total: 1
+2026-07-23 19:01:55.508 [http-nio-8080-exec-1] DEBUG com.sky.mapper.AddressBookMapper.list - ==>  Preparing: select * from address_book WHERE user_id = ? and is_default = ?
+2026-07-23 19:01:55.508 [http-nio-8080-exec-1] DEBUG com.sky.mapper.AddressBookMapper.list - ==> Parameters: 6(Long), 1(Integer)
+2026-07-23 19:01:55.510 [http-nio-8080-exec-1] DEBUG com.sky.mapper.AddressBookMapper.list - <==      Total: 1
+2026-07-23 19:01:57.831 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:submit, 参数:[OrdersSubmitDTO(addressBookId=7, payMethod=1, remark=, estimatedDeliveryTime=2026-07-23T20:01, deliveryStatus=0, tablewareNumber=0, tablewareStatus=0, packAmount=2, amount=98)]
+2026-07-23 19:01:57.833 [http-nio-8080-exec-2] INFO  com.sky.controller.user.OrderController - 用户下单:OrdersSubmitDTO(addressBookId=7, payMethod=1, remark=, estimatedDeliveryTime=2026-07-23T20:01, deliveryStatus=0, tablewareNumber=0, tablewareStatus=0, packAmount=2, amount=98)
+2026-07-23 19:01:57.844 [http-nio-8080-exec-2] DEBUG com.sky.mapper.AddressBookMapper.getById - ==>  Preparing: select * from address_book where id = ?
+2026-07-23 19:01:57.844 [http-nio-8080-exec-2] DEBUG com.sky.mapper.AddressBookMapper.getById - ==> Parameters: 7(Long)
+2026-07-23 19:01:57.846 [http-nio-8080-exec-2] DEBUG com.sky.mapper.AddressBookMapper.getById - <==      Total: 1
+2026-07-23 19:01:57.846 [http-nio-8080-exec-2] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 19:01:57.846 [http-nio-8080-exec-2] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 19:01:57.847 [http-nio-8080-exec-2] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 2
+2026-07-23 19:01:57.849 [http-nio-8080-exec-2] DEBUG com.sky.mapper.OrderMapper.insert - ==>  Preparing: insert into orders (number, status, user_id, address_book_id, order_time, checkout_time, pay_method, pay_status, amount, remark, phone, address, consignee, estimated_delivery_time, delivery_status, pack_amount, tableware_number, tableware_status) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-07-23 19:01:57.849 [http-nio-8080-exec-2] DEBUG com.sky.mapper.OrderMapper.insert - ==> Parameters: 1784804517849(String), 1(Integer), 6(Long), 7(Long), 2026-07-23T19:01:57.849247200(LocalDateTime), null, 1(Integer), 0(Integer), 98(BigDecimal), (String), 15342357402(String), 202(String), lulu(String), 2026-07-23T20:01(LocalDateTime), 0(Integer), 2(Integer), 0(Integer), 0(Integer)
+2026-07-23 19:01:57.851 [http-nio-8080-exec-2] DEBUG com.sky.mapper.OrderMapper.insert - <==    Updates: 1
+2026-07-23 19:01:57.859 [http-nio-8080-exec-2] DEBUG com.sky.mapper.OrderDetailMapper.insertBatch - ==>  Preparing: insert into order_detail (name, order_id, dish_id, setmeal_id, dish_flavor, number, amount, image) values (?,?,?,?,?, ?,?,?) , (?,?,?,?,?, ?,?,?)
+2026-07-23 19:01:57.859 [http-nio-8080-exec-2] DEBUG com.sky.mapper.OrderDetailMapper.insertBatch - ==> Parameters: 香锅牛蛙(String), 12(Long), 63(Long), null, null, 1(Integer), 88.00(BigDecimal), https://sky-itcast.oss-cn-beijing.aliyuncs.com/f5ac8455-4793-450c-97ba-173795c34626.png(String), 米饭(String), 12(Long), 49(Long), null, null, 1(Integer), 2.00(BigDecimal), https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png(String)
+2026-07-23 19:01:57.861 [http-nio-8080-exec-2] DEBUG com.sky.mapper.OrderDetailMapper.insertBatch - <==    Updates: 2
+2026-07-23 19:01:57.861 [http-nio-8080-exec-2] DEBUG com.sky.mapper.ShoppingCartMapper.delete - ==>  Preparing: delete from shopping_cart where id = ?
+2026-07-23 19:01:57.861 [http-nio-8080-exec-2] DEBUG com.sky.mapper.ShoppingCartMapper.delete - ==> Parameters: 12(Long)
+2026-07-23 19:01:57.861 [http-nio-8080-exec-2] DEBUG com.sky.mapper.ShoppingCartMapper.delete - <==    Updates: 0
+2026-07-23 19:01:57.864 [http-nio-8080-exec-2] INFO  com.sky.Aspect.LogAspect - 方法:submit 执行完毕, 耗时:33ms, 返回值:Result(code=1, msg=null, data=OrderSubmitVO(id=12, orderNumber=1784804517849, orderAmount=98, orderTime=2026-07-23T19:01:57.849247200))
+2026-07-23 19:02:00.211 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:payment, 参数:[OrdersPaymentDTO(orderNumber=1784804517849, payMethod=1)]
+2026-07-23 19:02:00.212 [http-nio-8080-exec-3] INFO  com.sky.controller.user.OrderController - 订单支付:OrdersPaymentDTO(orderNumber=1784804517849, payMethod=1)
+2026-07-23 19:02:00.212 [http-nio-8080-exec-3] DEBUG com.sky.mapper.UserMapper.getById - ==>  Preparing: select * from user where id = ?
+2026-07-23 19:02:00.214 [http-nio-8080-exec-3] DEBUG com.sky.mapper.UserMapper.getById - ==> Parameters: 6(Long)
+2026-07-23 19:02:00.215 [http-nio-8080-exec-3] DEBUG com.sky.mapper.UserMapper.getById - <==      Total: 1
+2026-07-23 19:02:00.226 [http-nio-8080-exec-3] DEBUG com.sky.mapper.OrderMapper.getByNumberAndUserId - ==>  Preparing: select * from orders where number = ? and user_id= ?
+2026-07-23 19:02:00.227 [http-nio-8080-exec-3] DEBUG com.sky.mapper.OrderMapper.getByNumberAndUserId - ==> Parameters: 1784804517849(String), 6(Long)
+2026-07-23 19:02:00.228 [http-nio-8080-exec-3] DEBUG com.sky.mapper.OrderMapper.getByNumberAndUserId - <==      Total: 1
+2026-07-23 19:02:00.232 [http-nio-8080-exec-3] DEBUG com.sky.mapper.OrderMapper.update - ==>  Preparing: update orders SET pay_status=?, checkout_time=?, status = ? where id = ?
+2026-07-23 19:02:00.232 [http-nio-8080-exec-3] DEBUG com.sky.mapper.OrderMapper.update - ==> Parameters: 1(Integer), 2026-07-23T19:02:00.228808100(LocalDateTime), 2(Integer), 12(Long)
+2026-07-23 19:02:00.237 [http-nio-8080-exec-3] DEBUG com.sky.mapper.OrderMapper.update - <==    Updates: 1
+2026-07-23 19:02:00.237 [http-nio-8080-exec-3] INFO  com.sky.Aspect.LogAspect - 方法:payment 执行完毕, 耗时:26ms, 返回值:Result(code=1, msg=null, data=OrderPaymentVO(nonceStr=null, paySign=null, timeStamp=null, signType=null, packageStr=null))
+2026-07-23 19:02:04.634 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[null]
+2026-07-23 19:02:04.635 [http-nio-8080-exec-4] DEBUG com.sky.mapper.CategoryMapper.list - ==>  Preparing: select * from category order by sort asc,create_time desc
+2026-07-23 19:02:04.635 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[]
+2026-07-23 19:02:04.635 [http-nio-8080-exec-4] DEBUG com.sky.mapper.CategoryMapper.list - ==> Parameters: 
+2026-07-23 19:02:04.636 [http-nio-8080-exec-5] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==>  Preparing: select * from shopping_cart WHERE user_id = 6 order by create_time desc
+2026-07-23 19:02:04.636 [http-nio-8080-exec-5] DEBUG com.sky.mapper.ShoppingCartMapper.list - ==> Parameters: 
+2026-07-23 19:02:04.638 [http-nio-8080-exec-5] DEBUG com.sky.mapper.ShoppingCartMapper.list - <==      Total: 2
+2026-07-23 19:02:04.638 [http-nio-8080-exec-5] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:3ms, 返回值:Result(code=1, msg=null, data=[ShoppingCart(id=23, name=香锅牛蛙, userId=6, dishId=63, setmealId=null, dishFlavor=null, number=1, amount=88.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/f5ac8455-4793-450c-97ba-173795c34626.png, createTime=2026-07-23T19:01:54), ShoppingCart(id=21, name=米饭, userId=6, dishId=49, setmealId=null, dishFlavor=null, number=1, amount=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, createTime=2026-07-23T12:45:43)])
+2026-07-23 19:02:04.639 [http-nio-8080-exec-4] DEBUG com.sky.mapper.CategoryMapper.list - <==      Total: 13
+2026-07-23 19:02:04.640 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:6ms, 返回值:Result(code=1, msg=null, data=[Category(id=24, type=1, name=面食类, sort=1, status=1, createTime=2026-07-11T20:56:59, updateTime=2026-07-11T23:01:09, createUser=1, updateUser=1), Category(id=22, type=1, name=凉菜, sort=3, status=1, createTime=2022-06-10T11:00, updateTime=2022-06-10T11:00, createUser=1, updateUser=1), Category(id=16, type=1, name=蜀味烤鱼, sort=4, status=1, createTime=2022-06-09T22:15:37, updateTime=2022-08-31T14:27:25, createUser=1, updateUser=1), Category(id=17, type=1, name=蜀味牛蛙, sort=5, status=1, createTime=2022-06-09T22:16:14, updateTime=2022-08-31T14:39:44, createUser=1, updateUser=1), Category(id=18, type=1, name=特色蒸菜, sort=6, status=1, createTime=2022-06-09T22:17:42, updateTime=2022-06-09T22:17:42, createUser=1, updateUser=1), Category(id=19, type=1, name=新鲜时蔬, sort=7, status=1, createTime=2022-06-09T22:18:12, updateTime=2022-06-09T22:18:28, createUser=1, updateUser=1), Category(id=20, type=1, name=水煮鱼, sort=8, status=1, createTime=2022-06-09T22:22:29, updateTime=2022-06-09T22:23:45, createUser=1, updateUser=1), Category(id=12, type=1, name=传统主食, sort=9, status=1, createTime=2022-06-09T22:09:32, updateTime=2022-06-09T22:18:53, createUser=1, updateUser=1), Category(id=11, type=1, name=酒水饮料, sort=10, status=1, createTime=2022-06-09T22:09:18, updateTime=2022-06-09T22:09:18, createUser=1, updateUser=1), Category(id=21, type=1, name=汤类, sort=11, status=1, createTime=2022-06-10T10:51:47, updateTime=2022-06-10T10:51:47, createUser=1, updateUser=1), Category(id=13, type=2, name=人气套餐, sort=12, status=1, createTime=2022-06-09T22:11:38, updateTime=2022-06-10T11:04:40, createUser=1, updateUser=1), Category(id=15, type=2, name=商务套餐, sort=13, status=1, createTime=2022-06-09T22:14:10, updateTime=2022-06-10T11:04:48, createUser=1, updateUser=1), Category(id=23, type=2, name=儿童套餐, sort=20, status=1, createTime=2022-06-10T11:15, updateTime=2022-06-10T11:15, createUser=1, updateUser=1)])
+2026-07-23 19:02:04.654 [http-nio-8080-exec-6] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:list, 参数:[24]
+2026-07-23 19:02:04.656 [http-nio-8080-exec-6] INFO  com.sky.Aspect.LogAspect - 方法:list 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=[DishVO(id=49, name=米饭, categoryId=24, price=2.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/76752350-2121-44d2-b477-10791c23a8ec.png, description=精选五常大米, status=1, updateTime=2022-06-10T09:30:17, categoryName=null, flavors=[]), DishVO(id=50, name=馒头, categoryId=24, price=1.00, image=https://sky-itcast.oss-cn-beijing.aliyuncs.com/475cc599-8661-4899-8f9e-121dd8ef7d02.png, description=优质面粉, status=1, updateTime=2022-06-10T09:34:28, categoryName=null, flavors=[])])
+2026-07-23 19:02:13.894 [http-nio-8080-exec-10] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/order/historyOrders
+2026-07-23 19:02:15.501 [http-nio-8080-exec-8] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /user/order/historyOrders
+2026-07-23 19:02:23.138 [http-nio-8080-exec-9] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-23 19:02:23.139 [http-nio-8080-exec-9] INFO  com.sky.controller.user.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-23 19:02:23.140 [http-nio-8080-exec-9] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:2ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-23 19:02:26.109 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2026-07-23 19:02:26.113 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
