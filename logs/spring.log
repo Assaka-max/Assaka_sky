@@ -4984,3 +4984,137 @@ Caused by: java.net.SocketException: Connection reset by peer
 2026-07-24 18:38:04.529 [http-nio-8080-exec-7] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/report/top10
 2026-07-24 18:38:18.047 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
 2026-07-24 18:38:18.050 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2026-07-24 23:24:01.078 [main] INFO  com.sky.SkyServerApplication - Starting SkyServerApplication using Java 17.0.12 on Assaka with PID 35160 (C:\Assaka_sky\sky-take-out\sky-server\target\classes started by 26827 in C:\Assaka_sky)
+2026-07-24 23:24:01.080 [main] INFO  com.sky.SkyServerApplication - The following 1 profile is active: "dev"
+2026-07-24 23:24:01.679 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-24 23:24:01.680 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-24 23:24:01.702 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2026-07-24 23:24:02.257 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-07-24 23:24:02.264 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-24 23:24:02.264 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2026-07-24 23:24:02.338 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-24 23:24:02.338 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1218 ms
+2026-07-24 23:24:02.435 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-07-24 23:24:02.523 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2026-07-24 23:24:02.697 [main] INFO  com.sky.config.OssConfiguration - 开始创建阿里云文件上传工具类对象......
+2026-07-24 23:24:02.812 [main] INFO  com.sky.config.RedisConfiguration - 开始创建redis模板对象...
+2026-07-24 23:24:03.039 [main] INFO  com.sky.config.WebMvcConfiguration - 开始注册自定义拦截器...
+2026-07-24 23:24:03.128 [main] INFO  com.sky.config.WebMvcConfiguration - 扩展消息转换器...
+2026-07-24 23:24:03.448 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-07-24 23:24:03.707 [main] INFO  com.sky.SkyServerApplication - Started SkyServerApplication in 2.932 seconds (JVM running for 3.177)
+2026-07-24 23:24:16.490 [http-nio-8080-exec-10] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-24 23:24:16.491 [http-nio-8080-exec-10] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-24 23:24:16.491 [http-nio-8080-exec-10] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-07-24 23:24:16.502 [http-nio-8080-exec-10] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzg0ODkwODA2fQ.95pPAvPdeR7Q__AmWiHBdmA8fi-NUpXCMAATyFALlbs
+2026-07-24 23:24:16.536 [http-nio-8080-exec-10] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 令牌不存在或过期
+2026-07-24 23:24:16.552 [http-nio-8080-exec-1] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzg0ODkwODA2fQ.95pPAvPdeR7Q__AmWiHBdmA8fi-NUpXCMAATyFALlbs
+2026-07-24 23:24:16.554 [http-nio-8080-exec-1] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 令牌不存在或过期
+2026-07-24 23:24:16.567 [http-nio-8080-exec-2] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzg0ODkwODA2fQ.95pPAvPdeR7Q__AmWiHBdmA8fi-NUpXCMAATyFALlbs
+2026-07-24 23:24:16.569 [http-nio-8080-exec-2] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 令牌不存在或过期
+2026-07-24 23:24:16.586 [http-nio-8080-exec-8] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/report/ordersStatistics
+2026-07-24 23:24:16.586 [http-nio-8080-exec-7] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/report/top10
+2026-07-24 23:24:17.644 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:login, 参数:[EmployeeLoginDTO(username=admin, password=123456)]
+2026-07-24 23:24:17.648 [http-nio-8080-exec-4] INFO  com.sky.controller.admin.EmployeeController - 员工登录：EmployeeLoginDTO(username=admin, password=123456)
+2026-07-24 23:24:17.750 [http-nio-8080-exec-4] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==>  Preparing: select * from employee where username = ?
+2026-07-24 23:24:17.765 [http-nio-8080-exec-4] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - ==> Parameters: admin(String)
+2026-07-24 23:24:17.789 [http-nio-8080-exec-4] DEBUG com.sky.mapper.EmployeeMapper.getByUsername - <==      Total: 1
+2026-07-24 23:24:17.794 [http-nio-8080-exec-4] INFO  com.sky.Aspect.LogAspect - 方法:login 执行完毕, 耗时:150ms, 返回值:Result(code=1, msg=null, data=EmployeeLoginVO(id=1, userName=admin, name=管理员, token=eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzg0OTEzODU3fQ.hKBc7GtEJtiXpBYm6rtxnAPHd0ShQqoGgkclwjYcqWY))
+2026-07-24 23:24:17.835 [http-nio-8080-exec-6] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzg0OTEzODU3fQ.hKBc7GtEJtiXpBYm6rtxnAPHd0ShQqoGgkclwjYcqWY
+2026-07-24 23:24:17.835 [http-nio-8080-exec-5] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/businessData
+2026-07-24 23:24:17.835 [http-nio-8080-exec-9] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/order/conditionSearch
+2026-07-24 23:24:17.837 [http-nio-8080-exec-10] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewOrders
+2026-07-24 23:24:17.837 [http-nio-8080-exec-1] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewDishes
+2026-07-24 23:24:17.837 [http-nio-8080-exec-3] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/workspace/overviewSetmeals
+2026-07-24 23:24:17.839 [http-nio-8080-exec-6] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：1
+2026-07-24 23:24:17.840 [http-nio-8080-exec-6] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:getStatus, 参数:[]
+2026-07-24 23:24:18.146 [http-nio-8080-exec-6] INFO  com.sky.controller.admin.ShopController - 获取到店铺的营业状态为：营业中
+2026-07-24 23:24:18.146 [http-nio-8080-exec-6] INFO  com.sky.Aspect.LogAspect - 方法:getStatus 执行完毕, 耗时:306ms, 返回值:Result(code=1, msg=null, data=1)
+2026-07-24 23:24:20.214 [http-nio-8080-exec-8] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzg0OTEzODU3fQ.hKBc7GtEJtiXpBYm6rtxnAPHd0ShQqoGgkclwjYcqWY
+2026-07-24 23:24:20.214 [http-nio-8080-exec-5] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/report/top10
+2026-07-24 23:24:20.214 [http-nio-8080-exec-7] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - jwt校验:eyJhbGciOiJIUzI1NiJ9.eyJlbXBJZCI6MSwiZXhwIjoxNzg0OTEzODU3fQ.hKBc7GtEJtiXpBYm6rtxnAPHd0ShQqoGgkclwjYcqWY
+2026-07-24 23:24:20.214 [http-nio-8080-exec-4] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /admin/report/ordersStatistics
+2026-07-24 23:24:20.214 [http-nio-8080-exec-7] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：1
+2026-07-24 23:24:20.214 [http-nio-8080-exec-8] INFO  com.sky.interceptor.JwtTokenAdminInterceptor - 当前员工id：1
+2026-07-24 23:24:20.222 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:turnoverStatistics, 参数:[2026-07-17, 2026-07-23]
+2026-07-24 23:24:20.222 [http-nio-8080-exec-7] INFO  com.sky.Aspect.LogAspect - -------------------------
+开始执行方法:userStatistics, 参数:[2026-07-17, 2026-07-23]
+2026-07-24 23:24:20.224 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==>  Preparing: select count(*) from user where create_time >= ? and create_time <= ?
+2026-07-24 23:24:20.225 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==> Parameters: 2026-07-17T00:00(LocalDateTime), 2026-07-17T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.228 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - <==      Total: 1
+2026-07-24 23:24:20.229 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==>  Preparing: select count(*) from user where create_time <= ?
+2026-07-24 23:24:20.229 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==> Parameters: 2026-07-17T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.230 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - <==      Total: 1
+2026-07-24 23:24:20.230 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==>  Preparing: select count(*) from user where create_time >= ? and create_time <= ?
+2026-07-24 23:24:20.230 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==> Parameters: 2026-07-18T00:00(LocalDateTime), 2026-07-18T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.232 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - <==      Total: 1
+2026-07-24 23:24:20.232 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==>  Preparing: select count(*) from user where create_time <= ?
+2026-07-24 23:24:20.232 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==> Parameters: 2026-07-18T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.233 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - <==      Total: 1
+2026-07-24 23:24:20.233 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==>  Preparing: select count(*) from user where create_time >= ? and create_time <= ?
+2026-07-24 23:24:20.233 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==> Parameters: 2026-07-19T00:00(LocalDateTime), 2026-07-19T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.234 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - <==      Total: 1
+2026-07-24 23:24:20.234 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==>  Preparing: select count(*) from user where create_time <= ?
+2026-07-24 23:24:20.234 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==> Parameters: 2026-07-19T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.234 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - <==      Total: 1
+2026-07-24 23:24:20.235 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==>  Preparing: select count(*) from user where create_time >= ? and create_time <= ?
+2026-07-24 23:24:20.235 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==> Parameters: 2026-07-20T00:00(LocalDateTime), 2026-07-20T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.236 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - <==      Total: 1
+2026-07-24 23:24:20.236 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==>  Preparing: select count(*) from user where create_time <= ?
+2026-07-24 23:24:20.236 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==> Parameters: 2026-07-20T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.237 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - <==      Total: 1
+2026-07-24 23:24:20.237 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==>  Preparing: select count(*) from user where create_time >= ? and create_time <= ?
+2026-07-24 23:24:20.237 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==> Parameters: 2026-07-21T00:00(LocalDateTime), 2026-07-21T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.238 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - <==      Total: 1
+2026-07-24 23:24:20.238 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==>  Preparing: select count(*) from user where create_time <= ?
+2026-07-24 23:24:20.238 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==> Parameters: 2026-07-21T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.239 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - <==      Total: 1
+2026-07-24 23:24:20.239 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==>  Preparing: select count(*) from user where create_time >= ? and create_time <= ?
+2026-07-24 23:24:20.239 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==> Parameters: 2026-07-22T00:00(LocalDateTime), 2026-07-22T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.240 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - <==      Total: 1
+2026-07-24 23:24:20.240 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==>  Preparing: select sum(amount) from orders WHERE status = ? and order_time >= ? and order_time <= ?
+2026-07-24 23:24:20.240 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==> Parameters: 5(Integer), 2026-07-17T00:00(LocalDateTime), 2026-07-17T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.243 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - <==      Total: 1
+2026-07-24 23:24:20.243 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==>  Preparing: select count(*) from user where create_time <= ?
+2026-07-24 23:24:20.243 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==> Parameters: 2026-07-22T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.244 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==>  Preparing: select sum(amount) from orders WHERE status = ? and order_time >= ? and order_time <= ?
+2026-07-24 23:24:20.244 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - <==      Total: 1
+2026-07-24 23:24:20.244 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==> Parameters: 5(Integer), 2026-07-18T00:00(LocalDateTime), 2026-07-18T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.245 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - <==      Total: 1
+2026-07-24 23:24:20.245 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==>  Preparing: select count(*) from user where create_time >= ? and create_time <= ?
+2026-07-24 23:24:20.245 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==>  Preparing: select sum(amount) from orders WHERE status = ? and order_time >= ? and order_time <= ?
+2026-07-24 23:24:20.245 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==> Parameters: 5(Integer), 2026-07-19T00:00(LocalDateTime), 2026-07-19T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.246 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - ==> Parameters: 2026-07-23T00:00(LocalDateTime), 2026-07-23T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.247 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getNewUser - <==      Total: 1
+2026-07-24 23:24:20.247 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - <==      Total: 1
+2026-07-24 23:24:20.248 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==>  Preparing: select count(*) from user where create_time <= ?
+2026-07-24 23:24:20.248 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==>  Preparing: select sum(amount) from orders WHERE status = ? and order_time >= ? and order_time <= ?
+2026-07-24 23:24:20.248 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - ==> Parameters: 2026-07-23T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.248 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==> Parameters: 5(Integer), 2026-07-20T00:00(LocalDateTime), 2026-07-20T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.249 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - <==      Total: 1
+2026-07-24 23:24:20.249 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==>  Preparing: select sum(amount) from orders WHERE status = ? and order_time >= ? and order_time <= ?
+2026-07-24 23:24:20.249 [http-nio-8080-exec-7] DEBUG com.sky.mapper.OrderMapper.getSumUser - <==      Total: 1
+2026-07-24 23:24:20.249 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==> Parameters: 5(Integer), 2026-07-21T00:00(LocalDateTime), 2026-07-21T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.250 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - <==      Total: 1
+2026-07-24 23:24:20.250 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==>  Preparing: select sum(amount) from orders WHERE status = ? and order_time >= ? and order_time <= ?
+2026-07-24 23:24:20.250 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==> Parameters: 5(Integer), 2026-07-22T00:00(LocalDateTime), 2026-07-22T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.251 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - <==      Total: 1
+2026-07-24 23:24:20.251 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==>  Preparing: select sum(amount) from orders WHERE status = ? and order_time >= ? and order_time <= ?
+2026-07-24 23:24:20.251 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - ==> Parameters: 5(Integer), 2026-07-23T00:00(LocalDateTime), 2026-07-23T23:59:59.999999999(LocalDateTime)
+2026-07-24 23:24:20.252 [http-nio-8080-exec-8] DEBUG com.sky.mapper.OrderMapper.sumByMap - <==      Total: 1
+2026-07-24 23:24:20.255 [http-nio-8080-exec-8] INFO  com.sky.Aspect.LogAspect - 方法:turnoverStatistics 执行完毕, 耗时:33ms, 返回值:Result(code=1, msg=null, data=TurnoverReportVO(dateList=2026-07-17,2026-07-18,2026-07-19,2026-07-20,2026-07-21,2026-07-22,2026-07-23, turnoverList=0.0,0.0,0.0,0.0,0.0,0.0,18.0))
+2026-07-24 23:24:20.255 [http-nio-8080-exec-7] INFO  com.sky.Aspect.LogAspect - 方法:userStatistics 执行完毕, 耗时:33ms, 返回值:Result(code=1, msg=null, data=UserReportVO(dateList=2026-07-17,2026-07-18,2026-07-19,2026-07-20,2026-07-21,2026-07-22,2026-07-23, totalUserList=0,0,0,1,1,1,1, newUserList=0,0,0,1,0,0,0))
+2026-07-24 23:25:00.008 [scheduling-1] INFO  com.sky.task.OrderTask - 处理支付超时订单:Fri Jul 24 23:25:00 CST 2026
+2026-07-24 23:25:00.009 [scheduling-1] DEBUG c.sky.mapper.OrderMapper.getByStatusAndOrdertimeLT - ==>  Preparing: select * from orders where status = ? and order_time < ?
+2026-07-24 23:25:00.010 [scheduling-1] DEBUG c.sky.mapper.OrderMapper.getByStatusAndOrdertimeLT - ==> Parameters: 1(Integer), 2026-07-24T23:10:00.008427500(LocalDateTime)
+2026-07-24 23:25:00.010 [scheduling-1] DEBUG c.sky.mapper.OrderMapper.getByStatusAndOrdertimeLT - <==      Total: 0
+2026-07-24 23:26:00.012 [scheduling-1] INFO  com.sky.task.OrderTask - 处理支付超时订单:Fri Jul 24 23:26:00 CST 2026
+2026-07-24 23:26:00.020 [scheduling-1] ERROR com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 60004
+2026-07-24 23:26:00.021 [scheduling-1] ERROR com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, jdbcUrl : jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true, lastPacketReceivedIdleMillis : 99772
+2026-07-24 23:26:00.024 [scheduling-1] DEBUG c.sky.mapper.OrderMapper.getByStatusAndOrdertimeLT - ==>  Preparing: select * from orders where status = ? and order_time < ?
+2026-07-24 23:26:00.024 [scheduling-1] DEBUG c.sky.mapper.OrderMapper.getByStatusAndOrdertimeLT - ==> Parameters: 1(Integer), 2026-07-24T23:11:00.012298700(LocalDateTime)
+2026-07-24 23:26:00.025 [scheduling-1] DEBUG c.sky.mapper.OrderMapper.getByStatusAndOrdertimeLT - <==      Total: 0
+2026-07-24 23:26:41.725 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2026-07-24 23:26:41.734 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

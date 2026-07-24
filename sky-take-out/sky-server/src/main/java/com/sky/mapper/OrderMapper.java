@@ -46,4 +46,21 @@ public interface OrderMapper {
      * @param map
      */
     Double sumByMap(Map map);
+
+    /**
+     * 当日新用户数
+     * @param begin
+     * @param end
+     * @return
+     */
+    @Select("select count(*) from user where create_time >= #{begin} and create_time <= #{end}")
+    Integer getNewUser(LocalDateTime begin, LocalDateTime end);
+
+    /**
+     * 当日总用户数
+     * @param end
+     * @return
+     */
+    @Select("select count(*) from user where create_time <= #{end}")
+    Integer getSumUser(LocalDateTime end);
 }
