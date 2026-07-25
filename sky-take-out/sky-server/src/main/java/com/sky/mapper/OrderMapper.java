@@ -1,5 +1,6 @@
 package com.sky.mapper;
 
+import com.sky.dto.GoodsSalesDTO;
 import com.sky.entity.Orders;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -95,4 +96,12 @@ public interface OrderMapper {
      */
     @Select("select count(*) from orders where order_time >= #{map.begin} and order_time <= #{map.end} and status = #{map.status}")
     Integer getValidCount(@Param("map") Map map);
+
+    /**
+     * 商品排名top10
+     * @param begin
+     * @param end
+     * @return
+     */
+    List<GoodsSalesDTO> getSalesTop10(LocalDateTime begin, LocalDateTime end);
 }
