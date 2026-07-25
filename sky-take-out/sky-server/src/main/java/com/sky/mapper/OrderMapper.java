@@ -104,4 +104,19 @@ public interface OrderMapper {
      * @return
      */
     List<GoodsSalesDTO> getSalesTop10(LocalDateTime begin, LocalDateTime end);
+
+    /**
+     * 得到当日营业额
+     * @param map
+     * @return
+     */
+    @Select("select sum(amount) from orders where order_time >= #{map.begin} and order_time <= #{map.end} and status = #{map.status}")
+    Double getTurnover(@Param("map") Map map);
+
+    /**
+     * 根据条件统计套餐数量
+     * @param map
+     * @return
+     */
+    Integer countByMap(Map map);
 }

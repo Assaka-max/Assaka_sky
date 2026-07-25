@@ -6,8 +6,10 @@ import com.sky.entity.Setmeal;
 import com.sky.vo.DishItemVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface SetmealMapper {
@@ -39,4 +41,12 @@ public interface SetmealMapper {
      * @return
      */
     Setmeal getById(@Param("id") Long id);
+
+    /**
+     * 查询该状态下的套餐总数
+     * @param map
+     * @return
+     */
+    @Select("select count(*) from setmeal where status = #{status}")
+    Integer countByMap(Map map);
 }

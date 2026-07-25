@@ -8,8 +8,10 @@ import com.sky.enumeration.OperationType;
 import com.sky.vo.DishVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface DishMapper {
@@ -54,4 +56,12 @@ public interface DishMapper {
      */
     @AutoFill(OperationType.UPDATE)
     void update(Dish dish);
+
+    /**
+     * 查询该状态下的菜品总数
+     * @param map
+     * @return
+     */
+    @Select("select count(*) from dish where status = #{status}")
+    Integer countByMap(Map map);
 }
