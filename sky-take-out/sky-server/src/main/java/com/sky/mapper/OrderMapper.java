@@ -2,6 +2,7 @@ package com.sky.mapper;
 
 import com.sky.entity.Orders;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.time.LocalDateTime;
@@ -63,4 +64,35 @@ public interface OrderMapper {
      */
     @Select("select count(*) from user where create_time <= #{end}")
     Integer getSumUser(LocalDateTime end);
+
+    /**
+     * 订单总数
+     * @return
+     */
+    @Select("select count(*) from orders")
+    Integer getTotal();
+
+    /**
+     * 有效订单总数
+     * @param status
+     * @return
+     */
+    @Select("select count(*) from orders where status = #{status}")
+    Integer getValidTotal(@Param("status") Integer status);
+
+    /**
+     * 得到当日订单总数
+     * @param map
+     * @return
+     */
+    @Select("select count(*) from orders where order_time >= #{map.begin} and order_time <= #{map.end}")
+    Integer getOrderCount(@Param("map") Map map);
+
+    /**
+     * 得到当日有效订单总数
+     * @param map
+     * @return
+     */
+    @Select("select count(*) from orders where order_time >= #{map.begin} and order_time <= #{map.end} and status = #{map.status}")
+    Integer getValidCount(@Param("map") Map map);
 }
