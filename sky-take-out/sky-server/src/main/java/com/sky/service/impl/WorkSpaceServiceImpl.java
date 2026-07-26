@@ -31,9 +31,7 @@ public class WorkSpaceServiceImpl implements WorkSpaceService {
     private SetmealMapper setmealMapper;
 
     @Override
-    public BusinessDataVO getBusinessData() {
-        LocalDateTime beginTime = LocalDateTime.now().with(LocalTime.MIN);
-        LocalDateTime endTime = LocalDateTime.now().with(LocalTime.MAX);
+    public BusinessDataVO getBusinessData(LocalDateTime beginTime, LocalDateTime endTime) {
         Map map = new HashMap<>();
         map.put("begin", beginTime);
         map.put("end", endTime);
@@ -42,6 +40,7 @@ public class WorkSpaceServiceImpl implements WorkSpaceService {
         Integer totalOrderCount = orderMapper.getOrderCount(map);
         Integer validOrderCount = orderMapper.getValidCount(map);
         Double turnover = orderMapper.getTurnover(map);
+        turnover = (turnover == null) ? 0.0 : turnover;
 
         Double orderCompletionRate = (totalOrderCount == 0) ? 0.0 : validOrderCount.doubleValue() / totalOrderCount;
         Double unitPrice = (validOrderCount == 0) ? 0.0 : turnover / validOrderCount;
